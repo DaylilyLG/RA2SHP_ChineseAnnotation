@@ -22,7 +22,7 @@ HTML（初学）
 
 ## 使用说明
 
-- 针对 DIY 新手的辅助教程，对于经验丰富的 Modder 可能不适用
+- 针对 DIY 新手的辅助包，对于经验丰富的 Modder 可能不适用
 
 ## 使用工具
 
@@ -32,3 +32,6 @@ HTML（初学）
 
 - Ares 引擎下载：[Ares下载页面](https://launchpad.net/ares/+download)
 - Ares 使用手册中文翻译版： [Ares 3.0 中文说明书](http://ys-e.ysepan.com/wap/daylily/LiE7E3AHD8jT9NhcJD/Df8i6APtdl1i3CdDgvblhKgaM34NHe/ARES3.0%E8%AF%B4%E6%98%8E%E4%B9%A620201211.chm)
+- XCC Mixer 下载：[XCC Mixer 安装程序](https://xhp.xwis.net/utilities/XCC_Utilities.exe)
+
+
