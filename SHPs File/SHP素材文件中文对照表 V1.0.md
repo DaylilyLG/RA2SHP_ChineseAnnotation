@@ -6,13 +6,13 @@
  ***使用了 Markdown 优化阅读体验，推荐使用 HBuilder、VScode 等软件打开***
 
 ## 前言：
-- 这是给初次接触红警DIY的朋友制作的，方便用中文查找shp素材，将所有shp文件名用中文标注了，新手用中文查找更方便，该对照表是单独附带在shp提取文件的压缩包内的，压缩包解压后的文件体积较大，你需要解压到磁盘空间充足的位置，一般搜索shp文件名就能在相关位置找到。（个人推荐使用 Ra2YuriAna 作为从零开始的DIY工具，附带简单的语句标签翻译，在这之上就推荐INI辅助工具 INIWeaver，对于制作复杂单位非常有帮助，但不支持实时修改） 
+- 这是给初次接触红警DIY的朋友们制作的，将所有shp文件名用中文标注，方便用中文查找shp素材，新手用中文查找更方便，对照中文并搜索shp文件名就能在相关位置找到想要的素材。该对照表是单独附带在shp提取文件的压缩包内的，若你熟练使用 XCC Mixer 工具进行提取，则只需解压此对照表即可。压缩包解压后的文件体积较大，你需要解压到磁盘空间充足的位置。（个人推荐使用 Ra2YuriAna 作为从零开始的DIY工具，附带简单的语句标签翻译，在这之上就推荐INI辅助工具 INIWeaver，对于制作复杂单位非常有帮助，但不支持实时修改 INI 内容） 
 
 ## 注意事项：
-- 有些shp官方未注册，例如在artmd.ini中的apmuzzle天启坦克开火、yuricntl尤里攻击，即便在rulesmd.ini里注册了可能也无法修复，是BUG，要用的话可以重新注册一个新名字。还有的shp是红警2(RA2)的前身"泰伯利亚之日(TS)"游戏的素材，是制作组遗留导致的，需要先使用对应的色盘来显示，以及一些用来测试的shp可能会没有色盘，所以会有部分shp色盘缺失，或者找不到对应注册名，还有的虽然注册了也添加了色盘，但游戏里没有用这个素材等等，是都正常的。
+- 有些shp官方未注册，例如在artmd.ini中的apmuzzle天启坦克开火、yuricntl尤里攻击，即便在rules规则ini文件(rules.ini, rulesmd.ini)里注册了可能也无法修复，是BUG，要用的话可以重新注册一个新名字。还有的shp是红警2(RA2)的前身"泰伯利亚之日(TS)"游戏的素材，是制作组遗留导致的，需要先使用对应的色盘来显示，以及一些用来测试的shp可能会没有色盘，所以会有部分shp色盘缺失，或者找不到对应注册名，还有的虽然注册了也添加了色盘，但游戏里没有用这个素材等等，是都正常的。
 - 由于文件实在太多，而且本人DIY水平也不高，就只能粗略地进行分类了，可能还有描述错误或遗漏的地方，还请见谅... 一些地方打了问号`？`，表示我也不确定是什么东西... 需要注意的是，shp存在`共用现象`，例如美国大兵射击地面的效果PIFFPIFF，游戏经常使用在其他单位上，以及坦克、船只还有步兵都可能会用到的120mm炮弹等等，泛用性很高。还有每个阵营的工程师共用engineer单个shp，“技师”与“绿衣男平民”共用单个shp，超时空传送共用同种传送动画等等，都是使用同一种素材，更多的我就不列举了。还有一些我认为会经常用到或者合适拿来DIY的动画效果，我会给它们备注`通用素材`给大家参考。
 
-* 以下所有shp文件使用了 XCC1.47 提取，提取位置已标明，这些shp素材 ***仅包含单位、建筑、动画及建造栏图标！***，其他shp或素材均未提取（tem覆盖图文件等）。
+* 以下所有shp文件使用了 XCC Mixer 1.47 提取，提取位置已标明，这些shp素材 ***仅包含单位、建筑、动画及建造栏图标！***，其他shp或素材均未提取（tem覆盖图文件等）。
 
 - 格式：`shp文件名   中文描述  （说明备注）`
 	
@@ -107,8 +107,8 @@
     parach       空降伞
     patriot      导弹（未使用素材
     pipbrd       ？
-    pips         ？
-    pips2        ？
+    pips         ？（可能是联机用的图标
+    pips2        ？（可能是联机用的图标
     place        地表
     pmatkmove    攻击（泰伯利亚的图标   
     pmgrdarea    保护（泰伯利亚的图标  
@@ -239,7 +239,7 @@
     ktstlexp     基洛夫空艇三星弹头动画
     mininuke     迷你核弹（用在V3火箭、恐怖分子等，通用素材
     nukeanim     核电站死亡武器弹头动画（也是核弹爆炸的效果
-    s_bang16     大小为16的迷你爆炸（未使用素材，驻军建筑开火？
+    s_bang16     大小为16的迷你爆炸（未使用素材
     s_bang24     大小为24的小型爆炸（未使用素材
     s_bang34     大小为34的中型爆炸（单位被摧毁爆炸，通用素材
     s_bang48     大小为48的大型爆炸（单位被摧毁爆炸，通用素材
@@ -258,7 +258,7 @@
     s_tumu60     大小为60的爆炸动画，单位被摧毁爆炸等（通用素材
     smkpuff      防空步兵、海蝎、防空履带车的弹头对空动画
     tstimpct     磁能坦克弹头动画
-    tstlexp      磁能反应炉爆炸（好像官方是准备弄个磁能坦克三星弹头动画，但是只用在了磁能反应炉的 Explosion= 里
+    tstlexp      磁能反应炉爆炸（好像官方是准备弄个磁能坦克三星弹头动画，但只用在磁能反应炉的 Explosion=
     twlt026      桥被炸断（桥被炸断产生的爆炸效果，由全局语句 BridgeExplosions= 控制
     twlt036      桥被炸断（桥被炸断产生的爆炸效果，由全局语句 BridgeExplosions= 控制
     twlt050      桥被炸断（桥被炸断产生的爆炸效果，由全局语句 BridgeExplosions= 控制
@@ -287,7 +287,7 @@
     ring         提示环（鼠标指针选取单位并点击路径点命令其移动时，在路径点下方产生的提示环
  [跳转到鼠标指针段落](### 鼠标指针shp)，代码查看器(如 HBuilder)可按住 Alt 并单击蓝色字段跳转
  
-#### 6、工具箱图标：（添加不会在正常对局中出现的箱子类型）
+#### 6、工具箱图标：（添加不会在正常对局中出现的箱子图标和类型）
     armor        装甲
     chemisle     一次核弹使用权（正常对局未使用，泰伯利亚中这个图标是化学弹，使用泰伯利亚 anim.pal 色盘可正确显示）
     cloak        隐形（正常对局未使用，使用泰伯利亚 anim.pal 色盘可正确显示
@@ -299,17 +299,40 @@
     shroudx      失去全图视野（正常对局未使用，使用泰伯利亚 anim.pal 色盘可正确显示
     speed        速度
     veteran      升级
-                 瓦斯气体（正常对局未使用，类似毒气，目前没找到 shp，可能在其他 mix
-    tem覆盖图    金矿（正常对局未使用，类似矿柱，拾取后金矿会在原地蔓延，这个是tem覆盖图，就没有提取了
+                 金矿（正常对局未使用，类似矿柱，拾取后金矿会在原地蔓延，这个是tem覆盖图文件，就没有提取了
     twlt070      爆炸类型1（正常对局未使用，多重爆炸效果，对任何单位都有伤害，也是桥被炸断的其中一种效果
-    twlt100      爆炸类型2（正常对局未使用，一次大爆炸，比类型1伤害高，但对建筑无伤害
-                 空箱子（显示的图标与装甲箱一样
+    twlt100      爆炸类型2（正常对局未使用，一次大爆炸，比类型1伤害高，但似乎对建筑无伤害
+                 
+##### 工具箱注册表[Powerups]（这里顺便放个注册表，可在rules规则ini里搜索它并修改这些参数）
+- 箱子生效范围可修改全局注册表中的数据[CrateRules]: CrateRadius=2.0(3x3),3.0(5x5)（其他的就不放了）
+- 若要启用部分无效箱子可能需要额外的平台，例如ares、phobos）
+  解释：箱子类型=生成概率,图像,能否在水上出现,参数（概率的总和一般不超过110）
+          Armor=10,ARMOR,yes,1.5    ; 附近5x5范围单位的护甲增加 - 参数：护甲乘数 x1.5
+      Firepower=10,FIREPOWR,yes,2.0 ; 附近5x5范围单位的火力增加 - 参数：火力乘数 x2.0
+       HealBase=10,HEALALL,yes      ; 所有已方单位立即满血，且没有范围限制
+          Money=20,MONEY,yes,2000   ; 立即获得一笔钱 - 参数：一次获得2000现金（单人战役控制：SoloCrateMoney=
+         Reveal=10,REVEAL,yes       ; 显示整个雷达地图
+          Speed=10,SPEED,yes,1.2    ; 附近5x5范围单位的速度增加 - 参数：速度乘数 x1.2
+        Veteran=20,VETERAN,yes,1    ; 单位升级 - 参数：一次升1级
+           Unit=20,<none>,no        ; 获得车辆
+                                    ; 以下是原版游戏中未使用的箱子	，修改概率可重新利用，无效箱子除外（注意概率总和≤110
+Invulnerability=0,ARMOR,yes,1.0     ; 无敌 - 参数：持续1分钟，无效（图标是装甲箱的，可删掉图标当空箱子用...）
+       IonStorm=0,<none>,yes        ; 引起离子风暴，无效
+            Gas=0,<none>,yes,100    ; 泰伯利亚气体 - 参数：每团气体云造成100伤害，无效
+       Tiberium=0,<none>,no         ; 泰伯利亚矿，拾取后生成金矿，在原地蔓延
+            Pod=0,<none>,no         ; 获得一次DropPod，泰伯利亚遗留，无效
+          Cloak=0,CLOAK,yes         ; 附近5x5范围单位隐形
+       Darkness=0,SHROUDX,yes       ; 关闭全图（间谍进雷达效果
+      Explosion=0,<none>,yes,500    ; 大爆炸 - 参数：每次爆炸产生500的伤害
+           ICBM=0,CHEMISLE,yes      ; 获得一次核弹发射权
+         Napalm=0,<none>,no,600     ; 火焰杀伤力 - 参数：火焰伤害600（红警1的遗留
+          Squad=0,<none>,no         ; 随机步兵小队，无效（红警1的遗留
 
 #### 7、超级武器效果：
     chronoar     超时空传送-选择（在原地显示的传送准备动画）
     chronofd     超时空传送-传送（在原地显示的传送动画）
     chronosk     超时空传送-单位特效（单位附带亮闪闪的特效，也用于超时空军团）
-    chronotg     超时空传送-传送（传送目的地显示的动画，chronofd 和 chronotg 共用同一种动画，只是文件名不同）
+    chronotg     超时空传送-传送（传送目的地显示的动画，chronofd 和 chronotg 共用相同动画，只是文件名不同）
     explolb      闪电风暴的闪电劈到地上的蓝色爆炸效果
     ironblst     铁幕（释放铁幕
     ironfx       铁幕生效时的单位被攻击后产生的抵消动画（幻影坦克的弹头动画
@@ -337,7 +360,7 @@
 ### 二、建造栏图标：（位置：language.mix > cameo.mix）
 
 
-
+***s
 ### 三、建筑（不包含覆盖图、地形对象及地形污染等）：
 
 建筑动画：（位置：ra2.mix > generic.mix）
@@ -363,18 +386,57 @@
 ***
 ## 尤里的复仇版本mix的shp中文名称：（位置：ra2md.mix）
 
-### 一、步兵单位和动画（位置：ra2md.mix > conquer.mix）
+### 一、步兵单位和动画（位置：ra2md.mix > conqmd.mix）
 
+#### 1、未分类：（尤里复仇
+    buildngz     给建筑用的色盘2？
+	cdgas        神经突击车的神经毒气（AnimList=CDGAS，弹头动画很少就不单独分类了）
+	diskray      磁悬幽浮吸取电厂、矿场产生的吸取环（DrainAnimationType=
+	forcshld     力场护盾效果（ForceShieldInvokeAnim=
+	gunfires     开火（未使用素材
+	gunfirey     开火（未使用素材，而且图像错位了...
+	mindanim     被心灵控制塔等控制的单位头顶特效（ControlledAnimationType=
+	mindanimr    被超级武器控制的单位头顶特效：心灵控制器（PermaControlledAnimationType=
+	mutate       被废弃的建造栏图标（基因突变（英文
+    pips         ？（可能是联机用的图标
+    pips2        ？（可能是联机用的图标
+	schpdepl     武装直升机展开动画
+	txgasg       绿色病毒气体（病毒狙击手击杀步兵后产生的毒气
+	txgasr       红色病毒气体（游戏未使用的废案，原为神经突击车的神经毒气
+	ucall3       驻军建筑开火（未使用素材，三个驻军开火动画的拼接
+	uccons       驻军建筑开火（未使用素材
+	ucinit       尤里新兵的驻军开火动画
+	
+#### 2、单位：（尤里复仇
+    arnd         魔鬼终结者
+	boris        鲍里斯
+	brute        狂兽人
+	caml         骆驼
+	dnoa         暴龙
+	dnob         腕龙
+	eins         爱因斯坦
+	ggi          重装大兵
+	init         尤里新兵
+	lunr         登月火箭员
+	mumy         木乃伊
+	rmnv         洛马诺夫总理
+	slav         奴隶
+	stln         蓝波
+	virus        病毒狙击手
+	yurix        尤里X
 
- 
- 被狂兽人锤碎 InfDeath=8
+#### 3、超级武器效果：（尤里复仇
+    pdfxcld      心灵控制器发动（尤里头像动画
+	pdfxloc      心灵控制器释放（类似尤里部署攻击的特效
 
-#### 光标、方向箭头指针和指示：
+#### 4、步兵死亡效果：（尤里复仇
+    brutdie      被狂兽人锤碎 InfDeath=8
+	gendeath     转化为狂兽人 InfDeath=9
+	virusd       被病毒狙击手杀死 InfantryVirus=
+
+#### 5、光标、方向箭头指针和指示：（尤里复仇
     mouse        鼠标指针（尤里复仇版本添加的鼠标指针有67帧  
 具体细节可到这个段落查看：[跳转](### 鼠标指针shp)，代码查看器(如 HBuilder)可按住 Alt 并单击蓝色字段跳转
-
-#### 超级武器效果：
-
 
 ### 二、建造栏图标：（位置：langmd.mix > cameomd.mix）
 
@@ -496,14 +558,14 @@ Part 3：（位置：ra2md.mix > isourbmd.mix）
     Disarm=369,15,0,-1,-1,Center,Middle           ;工程师拆除炸弹
     NoTogglePower=384,1,0,-1,-1,Center,Middle     ;无法切换电源（Ares 添加注册
     Scroll=385,1,0,-1,-1,Center,Middle            ;右键移动视角
-    ScrollESW=386,1,0,-1,-1,Center,Middle         ;右键移动视角上
-    ScrollSW=387,1,0,-1,-1,Center,Middle          ;右键移动视角右上
-    ScrollNSW=388,1,0,-1,-1,Center,Middle         ;右键移动视角右
-    ScrollNW=389,1,0,-1,-1,Center,Middle          ;右键移动视角右下
-    ScrollNEW=390,1,0,-1,-1,Center,Middle         ;右键移动视角下
-    ScrollNE=391,1,0,-1,-1,Center,Middle          ;右键移动视角左下
-    ScrollNES=392,1,0,-1,-1,Center,Middle         ;右键移动视角左
-    ScrollES=393,1,0,-1,-1,Center,Middle          ;右键移动视角左上
+    ScrollESW=386,1,0,-1,-1,Center,Middle         ;右键移动视角上方尽头
+    ScrollSW=387,1,0,-1,-1,Center,Middle          ;右键移动视角右上方尽头
+    ScrollNSW=388,1,0,-1,-1,Center,Middle         ;右键移动视角右方尽头
+    ScrollNW=389,1,0,-1,-1,Center,Middle          ;右键移动视角右下方尽头
+    ScrollNEW=390,1,0,-1,-1,Center,Middle         ;右键移动视角下方尽头
+    ScrollNE=391,1,0,-1,-1,Center,Middle          ;右键移动视角左下方尽头
+    ScrollNES=392,1,0,-1,-1,Center,Middle         ;右键移动视角左方尽头
+    ScrollES=393,1,0,-1,-1,Center,Middle          ;右键移动视角左上方尽头
     Protect2=394,10,4,-1,-1,Center,Middle         ;保护2(注册表没这个...补一下)
     AttackMove=404,9,4,63,5,Center,Middle         ;移动攻击
     Deploy2=413,9,4,-1,-1,Center,Middle           ;展开2(原版未使用光标)
