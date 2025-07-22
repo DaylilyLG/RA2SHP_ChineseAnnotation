@@ -306,27 +306,27 @@
 ##### 工具箱注册表[Powerups]（这里顺便放个注册表，可在rules规则ini里搜索它并修改这些参数）
 - 箱子生效范围可修改全局注册表中的数据[CrateRules]: CrateRadius=2.0(3x3),3.0(5x5)（其他的就不放了）
 - 若要启用部分无效箱子可能需要额外的平台，例如ares、phobos）
-  解释：箱子类型=生成概率,图像,能否在水上出现,参数（概率的总和一般不超过110）
-          Armor=10,ARMOR,yes,1.5    ; 附近5x5范围单位的护甲增加 - 参数：护甲乘数 x1.5
-      Firepower=10,FIREPOWR,yes,2.0 ; 附近5x5范围单位的火力增加 - 参数：火力乘数 x2.0
-       HealBase=10,HEALALL,yes      ; 所有已方单位立即满血，且没有范围限制
-          Money=20,MONEY,yes,2000   ; 立即获得一笔钱 - 参数：一次获得2000现金（单人战役控制：SoloCrateMoney=
-         Reveal=10,REVEAL,yes       ; 显示整个雷达地图
-          Speed=10,SPEED,yes,1.2    ; 附近5x5范围单位的速度增加 - 参数：速度乘数 x1.2
-        Veteran=20,VETERAN,yes,1    ; 单位升级 - 参数：一次升1级
-           Unit=20,<none>,no        ; 获得车辆
-                                    ; 以下是原版游戏中未使用的箱子	，修改概率可重新利用，无效箱子除外（注意概率总和≤110
-Invulnerability=0,ARMOR,yes,1.0     ; 无敌 - 参数：持续1分钟，无效（图标是装甲箱的，可删掉图标当空箱子用...）
-       IonStorm=0,<none>,yes        ; 引起离子风暴，无效
-            Gas=0,<none>,yes,100    ; 泰伯利亚气体 - 参数：每团气体云造成100伤害，无效
-       Tiberium=0,<none>,no         ; 泰伯利亚矿，拾取后生成金矿，在原地蔓延
-            Pod=0,<none>,no         ; 获得一次DropPod，泰伯利亚遗留，无效
-          Cloak=0,CLOAK,yes         ; 附近5x5范围单位隐形
-       Darkness=0,SHROUDX,yes       ; 关闭全图（间谍进雷达效果
-      Explosion=0,<none>,yes,500    ; 大爆炸 - 参数：每次爆炸产生500的伤害
-           ICBM=0,CHEMISLE,yes      ; 获得一次核弹发射权
-         Napalm=0,<none>,no,600     ; 火焰杀伤力 - 参数：火焰伤害600（红警1的遗留
-          Squad=0,<none>,no         ; 随机步兵小队，无效（红警1的遗留
+    格式例：箱子类型=生成概率,图像,能否在水上出现,参数（概率的总和一般不超过110）  
+              Armor=10,ARMOR,yes,1.5    ; 附近5x5范围单位的护甲增加 - 参数：护甲乘数 x1.5  
+          Firepower=10,FIREPOWR,yes,2.0 ; 附近5x5范围单位的火力增加 - 参数：火力乘数 x2.0  
+           HealBase=10,HEALALL,yes      ; 所有已方单位立即满血，且没有范围限制  
+              Money=20,MONEY,yes,2000   ; 立即获得一笔钱 - 参数：一次获得2000现金（单人战役控制：SoloCrateMoney=  
+             Reveal=10,REVEAL,yes       ; 显示整个雷达地图  
+              Speed=10,SPEED,yes,1.2    ; 附近5x5范围单位的速度增加 - 参数：速度乘数 x1.2  
+            Veteran=20,VETERAN,yes,1    ; 单位升级 - 参数：一次升1级  
+               Unit=20,<none>,no        ; 获得车辆  
+    以下是原版游戏中未使用的箱子	，修改概率可重新利用，无效箱子除外（注意概率总和≤110  
+    Invulnerability=0,ARMOR,yes,1.0     ; 无敌 - 参数：持续1分钟，无效（图标是装甲箱的，可删掉图标当空箱子用...）  
+           IonStorm=0,<none>,yes        ; 引起离子风暴，无效  
+                Gas=0,<none>,yes,100    ; 泰伯利亚气体 - 参数：每团气体云造成100伤害，无效  
+           Tiberium=0,<none>,no         ; 泰伯利亚矿，拾取后生成金矿，在原地蔓延  
+                Pod=0,<none>,no         ; 获得一次DropPod，泰伯利亚遗留，无效  
+              Cloak=0,CLOAK,yes         ; 附近5x5范围单位隐形  
+           Darkness=0,SHROUDX,yes       ; 关闭全图（间谍进雷达效果  
+          Explosion=0,<none>,yes,500    ; 大爆炸 - 参数：每次爆炸产生500的伤害  
+               ICBM=0,CHEMISLE,yes      ; 获得一次核弹发射权  
+             Napalm=0,<none>,no,600     ; 火焰杀伤力 - 参数：火焰伤害600（红警1的遗留  
+              Squad=0,<none>,no         ; 随机步兵小队，无效（红警1的遗留  
 
 #### 7、超级武器效果：
     chronoar     超时空传送-选择（在原地显示的传送准备动画）
@@ -595,3 +595,9 @@ Part 3：（位置：ra2md.mix > isourbmd.mix）
 
 
 * Tip：shp用RING命名可快速测试动画效果哦！进游戏，选取可操控单位，例如基地车，疯狂点击四周的地面即可！
+
+
+测试1  
+测试2
+测试3
+测试4
