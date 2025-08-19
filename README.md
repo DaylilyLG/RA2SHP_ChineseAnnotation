@@ -31,7 +31,7 @@ HTML（初学）
 ## 其他
 
 - Ares 引擎下载：[Ares下载页面](https://launchpad.net/ares/+download)
-- Ares 使用手册中文翻译版： [Ares 3.0 中文说明书(网页版)](https://ares-china.github.io/Ares-Manual/)、[Ares 3.0 中文说明书(CHM说明书文件)](https://pan.baidu.com/s/1t3p23uVwpXn32OX_4db3MQ?pwd=3jj2)
+- Ares 使用手册中文翻译版： [Ares 3.0 中文说明书（网页版）](https://ares-china.github.io/Ares-Manual/)、[Ares 3.0 中文说明书CHM文件（本地版）](https://pan.baidu.com/s/1t3p23uVwpXn32OX_4db3MQ?pwd=3jj2)
 - XCC Mixer 下载：[XCC Mixer 安装程序](https://xhp.xwis.net/utilities/XCC_Utilities.exe)
 
 
