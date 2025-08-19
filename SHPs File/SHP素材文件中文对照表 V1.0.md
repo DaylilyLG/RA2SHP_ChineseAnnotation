@@ -602,9 +602,16 @@ Part 3：（位置：ra2md.mix > isourbmd.mix）
 #### 还有其他的一些高级教程，有兴趣的同学可以过去观摩学习鸭↓↓↓
 - [红警教程专栏](https://www.bilibili.com/read/readlist/rl321941)
 
+#### Tips（小窍门和提示）
+① 推荐使用`Ra2YuriAna`作为从零开始的DIY工具，附带简单的语句标签翻译，如果熟练了，可尝试进阶INI辅助工具`INIWeaver`。  
+② Ares 引擎增强了查错功能，你可以鼠标右键对 RunAres.bat 进行编辑，用记事本或者其他的代码查看器打开，改成以下字段：  
+    
+	Syringe "gamemd.exe" %*  -NOLOGO -LOG
+    exit
 
-* Tip：推荐使用`Ra2YuriAna`作为从零开始的DIY工具，附带简单的语句标签翻译，如果熟练了，可尝试进阶INI辅助工具 `INIWeaver`。
-
+    备注：-NOLOGO(关闭EA商标的LOGO动画) -LOG(实时输出debug.log)，实时输出的 debug.log 日志文件在 debug 文件夹。
+	
+同时，推荐使用`Tail4Windows`或`Tail Ace`实现对 debug.log 文件的实时监控，查错更方便！
 
 测试1  
 测试2
