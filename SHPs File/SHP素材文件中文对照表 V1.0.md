@@ -591,7 +591,7 @@ Part 3：（位置：ra2md.mix > isourbmd.mix）
     SpyPlane=504,8,4,512,1,Center,Middle          ;侦察机
 
 # 推荐区
-### 推荐B站 fhy093 大佬制作的地形文件修改方法
+### 推荐B站 fhy093 大佬制作的地形文件和用户界面的修改方法
 1. [地形文件修改](https://www.bilibili.com/opus/665780992473038852/?from=readlist)
 2. [用户界面修改](https://www.bilibili.com/opus/989753283313664002/?from=readlist)
 
@@ -600,7 +600,7 @@ Part 3：（位置：ra2md.mix > isourbmd.mix）
 - [红警教程专栏](https://www.bilibili.com/read/readlist/rl321941)
 
 
-* Tip：推荐使用Ra2YuriAna作为从零开始的DIY工具，附带简单的语句标签翻译，在这之上就推荐INI辅助工具INIWeaver！
+* Tip：推荐使用`Ra2YuriAna`作为从零开始的DIY工具，附带简单的语句标签翻译，如果熟练了，可尝试进阶INI辅助工具 `INIWeaver`。
 
 
 测试1  
