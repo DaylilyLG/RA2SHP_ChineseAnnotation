@@ -632,9 +632,9 @@ Part 3：（位置：ra2md.mix > isourbmd.mix）
     SW.Deferment=0           ;生效前等待的帧数
     SW.AllowAI=no            ;AI电脑是否拥有这个武器
     SW.AlwaysGranted=yes     ;无需建筑，直接使用（例如闪电风暴需要天气控制器这个建筑）
-	PS：记得在[SuperWeaponTypes]上注册这个超级武器  
+	;PS：记得在[SuperWeaponTypes]上注册这个超级武器  
 
-   000  
+   0  
    
 ~~~~~~~~~~
   
