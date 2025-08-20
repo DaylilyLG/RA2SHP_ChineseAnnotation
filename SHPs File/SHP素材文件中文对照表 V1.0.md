@@ -611,8 +611,29 @@ Part 3：（位置：ra2md.mix > isourbmd.mix）
     备注：-NOLOGO(关闭EA商标的LOGO动画) -LOG(实时输出debug.log)，实时输出的 debug.log 日志文件在 debug 文件夹。
 	
 同时，推荐使用`Tail4Windows`或`Tail Ace`实现对 debug.log 文件的实时监控，查错更方便！  
+  
+※ Ares 引擎强化了测试手段，现在允许直接投放单位到地图进行测试了，下面放出模板代码，可直接复制使用：（具体实现手法可以查阅 Ares 说明书）  
 
+    [Test] 
+    UIName=NOSTR:TEST        ;CSF 文件内对应的名称
+    IsPowered=false          ;false 表示无需供电
+    RechargeTime=-1          ;-1 表示无等待时间
+    Type=UnitDelivery        ;武器类型，这个不用修改
+    Cursor=Move              ;显示的鼠标指针图标
+    NoCursor=NoMove          ;不能投放时显示的鼠标指针图标
+    Range=4                  ;生效范围圆圈
+    LineMultiplier=2         ;圆圈的密度
+    Deliver.Types=AMCV,TESLA ;投放盟军基地车和磁暴线圈，可往后添加更多单位
+    Deliver.Owner=Invoker    ;投放出的单位归谁拥有
+    SW.Deferment=0           ;生效前等待的帧数
+    SW.AllowAI=no            ;AI电脑是否拥有这个武器
+    SW.AlwaysGranted=yes     ;无需建筑，直接使用（例如闪电风暴需要天气控制器这个建筑）
 
+单位投放其实就是超级武器的一种，由 Ares 引擎实现，所以这里我又要推荐安装一下 Ares 引擎了（啰嗦），当然还有其他拓展引擎，例如 Phobos（Phobos 的功能作者还在探索学习中...Phobos 与 Ares 结合使用达到最佳效果）。
+  
+  1
+  
+  1  
 测试1  
 测试2
 测试3
