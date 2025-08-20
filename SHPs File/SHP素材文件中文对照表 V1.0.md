@@ -303,12 +303,12 @@
     twlt070      爆炸类型1（正常对局未使用，多重爆炸效果，对任何单位都有伤害，也是桥被炸断的其中一种效果
     twlt100      爆炸类型2（正常对局未使用，一次大爆炸，比类型1伤害高，但似乎对建筑无伤害
 	veteran      升级
-	wccloud1     毒气（正常对局未使用，调用的是闪电风暴的乌云图像，且强制使用anim.pal色盘
+	wccloud1     毒气（正常对局未使用，调用的是闪电风暴的乌云图像，且强制使用anim.pal色盘，可换成其他使用anim.pal色盘的图像
                  
 ##### 工具箱注册表[Powerups]（可在规则文件里搜索这个注册表并修改它的数据）
 - `可进一步修改全局注册表中的数据[CrateRules]: 例如箱子生效范围 CrateRadius=3.0(3.0为5x5面积,2.0为3x3面积)`
-- `若要启用部分无效的箱子可能需要额外的平台支持（例如ares、phobos）` 
-- `注意！该注册表放入地图文件是无效的！` 
+- `部分箱子的参数是无效的，可根据情况在其他配置文件中修改数据（例如添加 Gas 这类箱子的图像附加伤害，直接在 art.ini 中写伤害和弹头：Damage=、Warhead=）` 
+- `注：工具箱注册表无法正常读取在地图文件内注册的动画，也无法在地图文件内使用这个注册表，应在规则文件内修改` 
 
  `为方便查看，将“=”纵向对齐（突发强迫症）`  
   
@@ -316,7 +316,7 @@
 	
                 Armor=10,ARMOR,yes,1.5    ; 附近5x5范围单位的护甲增加--参数：护甲乘数 x1.5  
             Firepower=10,FIREPOWR,yes,2.0 ; 附近5x5范围单位的火力增加--参数：火力乘数 x2.0  
-             HealBase=10,HEALALL,yes      ; 所有已方单位立即满血，且不受范围限制  
+             HealBase=10,HEALALL,yes      ; 所有已方单位立即满血（指全图已方单位立即满血，且效果不受范围限制）  
                 Money=20,MONEY,yes,2000   ; 立即获得一笔钱--参数：一次获得2000现金（单人战役控制SoloCrateMoney=  
                Reveal=10,REVEAL,yes       ; 显示整个雷达地图  
                 Speed=10,SPEED,yes,1.2    ; 附近5x5范围单位的速度增加--参数：速度乘数 x1.2  
@@ -327,14 +327,14 @@
 	
       Invulnerability=0,ARMOR,yes,1.0     ; 无敌--参数：持续1分钟【无效】（图标是装甲箱，可删掉图标当空箱子用...）  
              IonStorm=0,<none>,yes        ; 引起离子风暴【无效】  
-                  Gas=0,<none>,yes,100    ; 泰伯利亚气体--参数：每团气体云造成100伤害【无效】  
-             Tiberium=0,<none>,no         ; 泰伯利亚矿，拾取后生成金矿并在原地蔓延  
+                  Gas=0,<none>,yes,100    ; 泰伯利亚气体（毒气）--参数：每团气体云造成100伤害【参数无效】（默认图像 wccloud1）  
+             Tiberium=0,<none>,no         ; 泰伯利亚矿（金矿），拾取后生成金矿并在原地蔓延  
                   Pod=0,<none>,no         ; 获得一次DropPod【无效】（泰伯利亚遗留  
                 Cloak=0,CLOAK,yes         ; 附近5x5范围单位获得隐形  
-             Darkness=0,SHROUDX,yes       ; 关闭全图（间谍进雷达效果  
+             Darkness=0,SHROUDX,yes       ; 关闭全图（间谍渗透雷达效果  
             Explosion=0,<none>,yes,500    ; 大爆炸--参数：每次爆炸产生500的伤害  
                  ICBM=0,CHEMISLE,yes      ; 获得一次核弹发射权  
-               Napalm=0,<none>,no,600     ; 火焰杀伤力--参数：火焰伤害600（红警1的遗留  
+               Napalm=0,<none>,no,600     ; 火焰杀伤力--参数：火焰伤害600【无效】（红警1的遗留  
                 Squad=0,<none>,no         ; 随机步兵小队【无效】（红警1的遗留  
 
 #### 7、超级武器效果：
@@ -602,16 +602,16 @@ Part 3：（位置：ra2md.mix > isourbmd.mix）
 #### 还有其他的一些高级教程，有兴趣的同学可以过去观摩学习鸭↓↓↓
 - [红警教程专栏](https://www.bilibili.com/read/readlist/rl321941)
 
-#### Tips（小窍门和提示）
-① 推荐使用`Ra2YuriAna`作为从零开始的DIY工具，附带简单的语句标签翻译，如果熟练了，可尝试进阶INI辅助工具`INIWeaver`。  
-② Ares 引擎增强了查错功能，你可以鼠标右键对 RunAres.bat 进行编辑，用记事本或者其他的代码查看器打开，改成以下字段：  
+#### Tips（小窍门和提示） 
+※ Ares 引擎增强了查错功能，你可以鼠标右键对 RunAres.bat 进行编辑，用记事本或者其他的代码查看器打开，改成以下字段：  
     
 	Syringe "gamemd.exe" %*  -NOLOGO -LOG
     exit
 
     备注：-NOLOGO(关闭EA商标的LOGO动画) -LOG(实时输出debug.log)，实时输出的 debug.log 日志文件在 debug 文件夹。
 	
-同时，推荐使用`Tail4Windows`或`Tail Ace`实现对 debug.log 文件的实时监控，查错更方便！
+同时，推荐使用`Tail4Windows`或`Tail Ace`实现对 debug.log 文件的实时监控，查错更方便！  
+
 
 测试1  
 测试2
