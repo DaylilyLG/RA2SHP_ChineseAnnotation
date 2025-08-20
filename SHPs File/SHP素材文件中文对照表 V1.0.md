@@ -612,6 +612,8 @@ Part 3：（位置：ra2md.mix > isourbmd.mix）
 	
 同时，推荐使用`Tail4Windows`或`Tail Ace`实现对 debug.log 文件的实时监控，查错更方便！  
   
+  ~
+  
 ※ Ares 引擎强化了测试手段，现在允许直接投放单位到地图进行测试了，下面放出模板代码，可直接复制使用：（具体实现手法可以查阅 Ares 说明书）  
   
 `单位投放其实就是超级武器的一种，由 Ares 引擎实现，所以这里我又要推荐安装一下 Ares 引擎了（啰嗦），当然还可以考虑安装其他拓展引擎，例如 Phobos（Phobos 的功能作者还在探索学习中...Phobos 与 Ares 结合使用达到最佳效果）。`
@@ -630,9 +632,11 @@ Part 3：（位置：ra2md.mix > isourbmd.mix）
     SW.Deferment=0           ;生效前等待的帧数
     SW.AllowAI=no            ;AI电脑是否拥有这个武器
     SW.AlwaysGranted=yes     ;无需建筑，直接使用（例如闪电风暴需要天气控制器这个建筑）
-	PS：记得在[SuperWeaponTypes]上注册这个超级武器
+	PS：记得在[SuperWeaponTypes]上注册这个超级武器  
 
-
+   000  
+   
+~~~~~~~~~~
   
   1
   
