@@ -3,7 +3,7 @@
 <strong>BY Daylily<strong>
 
 # 对照表
- ***使用了 Markdown 优化阅读体验，推荐使用 HBuilder、VScode 等软件打开***
+ ***使用了 Markdown 标记语言优化阅读体验，推荐在线阅览，或使用 HBuilder、VScode 等软件打开***
 
 ## 前言：
 - 这是给初次接触红警DIY的朋友们制作的，将所有shp文件名用中文标注，方便用中文查找shp素材，新手用中文查找更方便，对照中文并搜索shp文件名就能在相关位置找到想要的素材。该对照表是单独附带在shp提取文件的压缩包内的，若你熟练使用 XCC Mixer 工具进行提取，则只需解压此对照表即可。压缩包解压后的文件体积较大，你需要解压到磁盘空间充足的位置。（个人推荐使用 Ra2YuriAna 作为从零开始的DIY工具，附带简单的语句标签翻译，在这之上就推荐INI辅助工具 INIWeaver，对于制作复杂单位非常有帮助，但不支持实时修改 INI 内容） 
@@ -307,12 +307,12 @@
                  
 ##### 工具箱注册表[Powerups]（可在规则文件里搜索这个注册表并修改它的数据）
 - `可进一步修改全局注册表中的数据[CrateRules]: 例如箱子生效范围 CrateRadius=3.0(3.0为5x5面积,2.0为3x3面积)`
-- `部分箱子的参数是无效的，可根据情况在其他配置文件中修改数据（例如添加 Gas 这类箱子的图像附加伤害，直接在 art.ini 中写伤害和弹头：Damage=、Warhead=）` 
+- `部分箱子的参数是无效的，可根据情况在其他配置文件中修改数据（例如增加 Gas 这类箱子的图像附加伤害，可在 art.ini 中写伤害和弹头：Damage=、Warhead=）` 
 - `注：工具箱注册表无法正常读取在地图文件内注册的动画，也无法在地图文件内使用这个注册表，应在规则文件内修改` 
 
  `为方便查看，将“=”纵向对齐（突发强迫症）`  
   
-    格式例：箱子类型=生成概率,图像,能否在水上出现,参数（概率的总和一般不超过110）  
+    格式例：箱子类型=生成概率,图像,能否在水上出现,参数（“生成概率” 的总和一般不超过 110）  
 	
                 Armor=10,ARMOR,yes,1.5    ; 附近5x5范围单位的护甲增加--参数：护甲乘数 x1.5  
             Firepower=10,FIREPOWR,yes,2.0 ; 附近5x5范围单位的火力增加--参数：火力乘数 x2.0  
@@ -321,11 +321,11 @@
                Reveal=10,REVEAL,yes       ; 显示整个雷达地图  
                 Speed=10,SPEED,yes,1.2    ; 附近5x5范围单位的速度增加--参数：速度乘数 x1.2  
               Veteran=20,VETERAN,yes,1    ; 单位升级--参数：一次升1级  
-                 Unit=20,<none>,no        ; 获得车辆  
+                 Unit=20,<none>,no        ; 获得车辆（已有50个车辆或箱子在水上/沙滩上将会转为现金，当遭遇战中玩家目前资金不足1500，同时没有基地车或任何一个建筑，那么箱子会强制生成基地车）  
 			   
-    以下是原版游戏中未使用的箱子，修改概率可重新利用，无效箱子除外（注意概率总和≤110）  
+    以下是原版游戏中未使用的箱子，修改概率可重新利用，无效箱子除外（注意概率总和 ≤ 110）  
 	
-      Invulnerability=0,ARMOR,yes,1.0     ; 无敌--参数：持续1分钟【无效】（图标是装甲箱，可删掉图标当空箱子用...）  
+      Invulnerability=0,ARMOR,yes,1.0     ; 无敌--参数：持续1分钟【无效】（图标是装甲箱，可删掉图标当空箱子用...红警1的遗留）  
              IonStorm=0,<none>,yes        ; 引起离子风暴【无效】  
                   Gas=0,<none>,yes,100    ; 泰伯利亚气体（毒气）--参数：每团气体云造成100伤害【参数无效】（默认图像 wccloud1）  
              Tiberium=0,<none>,no         ; 泰伯利亚矿（金矿），拾取后生成金矿并在原地蔓延  
@@ -334,7 +334,7 @@
              Darkness=0,SHROUDX,yes       ; 关闭全图（间谍渗透雷达效果  
             Explosion=0,<none>,yes,500    ; 大爆炸--参数：每次爆炸产生500的伤害  
                  ICBM=0,CHEMISLE,yes      ; 获得一次核弹发射权  
-               Napalm=0,<none>,no,600     ; 火焰杀伤力--参数：火焰伤害600【无效】（红警1的遗留  
+               Napalm=0,<none>,no,600     ; 火焰杀伤（大爆炸）--参数：每次爆炸产生600的伤害（似乎无法对建筑造成伤害）  
                 Squad=0,<none>,no         ; 随机步兵小队【无效】（红警1的遗留  
 
 #### 7、超级武器效果：
@@ -610,7 +610,7 @@ Part 3：（位置：ra2md.mix > isourbmd.mix）
 
     备注：-NOLOGO(关闭EA商标的LOGO动画) -LOG(实时输出debug.log)，实时输出的 debug.log 日志文件在 debug 文件夹。
 	
-同时，推荐使用`Tail4Windows`或`Tail Ace`实现对 debug.log 文件的实时监控，查错更方便！  
+同时，推荐使用 [Tail4Window](https://github.com/tualatin/tailforwindows/releases) 或 [Tail Ace](https://sourceforge.net/projects/tailace/) 实现对 debug.log 文件的实时监控，查错更方便！  
   
   ~
   
@@ -632,9 +632,9 @@ Part 3：（位置：ra2md.mix > isourbmd.mix）
     SW.Deferment=0           ;生效前等待的帧数
     SW.AllowAI=no            ;AI电脑是否拥有这个武器
     SW.AlwaysGranted=yes     ;无需建筑，直接使用（例如闪电风暴需要天气控制器这个建筑）
-	;PS：记得在[SuperWeaponTypes]上注册这个超级武器  
+	;PS：记得在超级武器注册表[SuperWeaponTypes]上注册这个超级武器  
 
-   0  
+   000  
    
 ~~~~~~~~~~
   
