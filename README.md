@@ -37,5 +37,5 @@ HTML（初学）
 - Phobos 使用手册中文翻译版：[Phobos 中文说明书（网页版）](https://phobos.readthedocs.io/zh-cn/latest/)
 - XCC Mixer 下载：[XCC Mixer 安装程序](https://xhp.xwis.net/utilities/XCC_Utilities.exe)
 - Tail4Windows 实时监测日志工具：[Tail4Windows Github 项目下载地址](https://github.com/tualatin/tailforwindows/releases)
-- Tail Ace 实时监测日志工具：[Tail Ace 安装程序下载](sourceforge.net/projects/tailace/)
+- Tail Ace 实时监测日志工具：[Tail Ace 安装程序下载](https://sourceforge.net/projects/tailace/)
 
