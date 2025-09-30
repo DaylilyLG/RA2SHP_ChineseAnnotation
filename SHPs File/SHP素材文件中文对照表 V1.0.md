@@ -1,7 +1,3 @@
-
-<center><font color=#FF0000><font color=#FF0000 size=6 face="Arial">红色警戒2 + 尤里的复仇 SHP素材文件中文对照表 V1.0</font><center>
-<strong>BY Daylily<strong>
-
 # 对照表
  ***使用了 Markdown 标记语言优化阅读体验，推荐在线阅览，或使用 HBuilder、VScode 等软件打开***
 
@@ -13,7 +9,7 @@
 - 有的shp是制作组遗留下来的产物，例如红警2(RA2)的前身"泰伯利亚之日(TS)"游戏的素材，若要使用遗留的素材通常要进行调整（例如修改规则文件、换用正确的色盘来显示等），以及一些用来测试的shp可能会没有色盘或者找不到对应的注册名，有的虽然注册了也添加了色盘，但游戏里没有使用这个素材等等，均为正常现象。（游戏还存在诸多遗留的硬编码，在DIY过程中可能会遇到无法解决的硬性问题，可尝试安装ares或phobos等平台，能改善或解决很多问题）
 - 由于文件实在太多，而且本人DIY水平也不高，就只能粗略地进行分类了，可能还有描述错误或遗漏的地方，还请见谅... 一些地方打了问号`？`，表示我也不确定是什么东西... 需要注意的是，shp存在`共用现象`，例如美国大兵射击地面的效果PIFFPIFF，游戏经常使用在其他单位上，以及坦克、船只还有步兵都可能会用到的120mm炮弹等等，泛用性很高。还有每个阵营的工程师共用engineer单个shp，“技师”与“绿衣男平民”共用单个shp，超时空传送共用同种传送动画等等，都是使用同一种素材，更多的我就不列举了。还有一些我认为会经常用到或者合适拿来DIY的动画效果，我会给它们备注`通用素材`给大家参考。
 
-* 以下所有shp文件使用了 XCC Mixer 1.47 提取，提取位置已标明，这些shp素材 ***仅包含单位、建筑、动画及建造栏图标！***，其他shp或素材均未提取（tem覆盖图文件等）。
+* 以下所有shp文件使用了 XCC Mixer 1.47 提取，提取位置已标明，这些shp素材 ***仅包含单位、建筑、动画及建造栏图标！***，其他shp或素材均未提取（tem覆盖图文件或其他零碎素材等）。
 
 - 格式：`shp文件名   中文描述  （说明备注）`
 	
@@ -340,7 +336,7 @@
 #### 7、超级武器效果：
     chronoar     超时空传送-选择（在原地显示的传送准备动画）
     chronofd     超时空传送-传送（在原地显示的传送动画）
-    chronosk     超时空传送-单位特效（单位附带亮闪闪的特效，也用于超时空军团）
+    chronosk     超时空传送-单位特效（单位附带亮闪闪的特效，也用于超时空军团等传送单位）
     chronotg     超时空传送-传送（传送目的地显示的动画，chronofd 和 chronotg 共用相同动画，只是文件名不同）
     explolb      闪电风暴的闪电劈到地上的蓝色爆炸效果
     ironblst     铁幕（释放铁幕
@@ -411,7 +407,7 @@
     pips2        ？（可能是联机用的图标
 	schpdepl     武装直升机展开动画
 	txgasg       绿色病毒气体（病毒狙击手击杀步兵后产生的毒气
-	txgasr       红色病毒气体（游戏未使用的废案，原为神经突击车的神经毒气
+	txgasr       红色病毒气体（游戏未使用的废案
 	ucall3       驻军建筑开火（未使用素材，三个驻军开火动画的拼接
 	uccons       驻军建筑开火（未使用素材
 	ucinit       尤里新兵的驻军开火动画
@@ -477,10 +473,10 @@ Part 3：（位置：ra2md.mix > isourbmd.mix）
 
 #### 注意事项
  **下面将涉及到 Ares 引擎，Ares 在尤里复仇版本的基础上扩展了许多功能，对于DIY来说非常有用！推荐下载！（该引擎不支持红警2原版，对于红警2原版DIY玩家，以下内容可忽略）**
-[Ares下载页面](https://launchpad.net/ares/+download)，代码查看器(如 HBuilder)可按住 Alt 并单击蓝色字段跳转  
+[Ares下载页面](https://launchpad.net/ares/+download)< 如使用代码查看器(如 HBuilder)可按住 Alt 并单击蓝色字段跳转  
 
  **下载解压至游戏本体目录即安装完成，现在你可以在规则文件里手动添加新的注册表了，初次使用需要参照 Ares 说明书使用，具体使用说明这里就不再复述。**
-[Ares 3.0 中文说明书](http://ys-e.ysepan.com/wap/daylily/LiE7E3AHD8jT9NhcJD/Df8i6APtdl1i3CdDgvblhKgaM34NHe/ARES3.0%E8%AF%B4%E6%98%8E%E4%B9%A620201211.chm)< 在说明书内直接搜索注册表：[MouseCursors]，即可看到详细使用说明
+[Ares 3.0 中文说明书](https://pan.baidu.com/s/1t3p23uVwpXn32OX_4db3MQ?pwd=3jj2)< 在说明书内直接搜索注册表：[MouseCursors]，即可看到详细使用说明
 #### Ares自定义光标格式说明
 - 格式：
     Name=Frame,Count,Interval,MiniFrame,MiniCount,HotSpotX,HotSpotY  
@@ -601,7 +597,7 @@ Part 3：（位置：ra2md.mix > isourbmd.mix）
 
 #### 还有其他的一些高级教程，有兴趣的同学可以过去观摩学习鸭↓↓↓
 - [红警教程专栏](https://www.bilibili.com/read/readlist/rl321941)
-
+---
 #### Tips（小窍门和提示） 
 ※ Ares 引擎增强了查错功能，你可以鼠标右键对 RunAres.bat 进行编辑，用记事本或者其他的代码查看器打开，改成以下字段：  
     
@@ -612,7 +608,7 @@ Part 3：（位置：ra2md.mix > isourbmd.mix）
 	
 同时，推荐使用 [Tail4Window](https://github.com/tualatin/tailforwindows/releases) 或 [Tail Ace](https://sourceforge.net/projects/tailace/) 实现对 debug.log 文件的实时监控，查错更方便！  
   
-  ~
+)
   
 ※ Ares 引擎强化了测试手段，现在允许直接投放单位到地图进行测试了，下面放出模板代码，可直接复制使用：（具体实现手法可以查阅 Ares 说明书）  
   
@@ -632,11 +628,11 @@ Part 3：（位置：ra2md.mix > isourbmd.mix）
     SW.Deferment=0           ;生效前等待的帧数
     SW.AllowAI=no            ;AI电脑是否拥有这个武器
     SW.AlwaysGranted=yes     ;无需建筑，直接使用（例如闪电风暴需要天气控制器这个建筑）
-	;PS：记得在超级武器注册表[SuperWeaponTypes]上注册这个超级武器  
+	;PS：记得在超级武器注册表 [SuperWeaponTypes] 上注册这个超级武器  
 
    000  
    
-~~~~~~~~~~
+~~~
   
   1
   
@@ -645,3 +641,9 @@ Part 3：（位置：ra2md.mix > isourbmd.mix）
 测试2
 测试3
 测试4
+~~~
+
+
+  
+<center><font color=#FF0000><font color=#FF0000 size=6 face="Arial">红色警戒2 + 尤里的复仇 SHP素材文件中文对照表 V1.0</font><center>
+<strong>BY Daylily<strong>
