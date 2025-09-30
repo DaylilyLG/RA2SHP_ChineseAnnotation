@@ -586,5 +586,6 @@ null
     SW.AlwaysGranted=yes     ;无需建筑，直接使用（例如闪电风暴需要天气控制器这个建筑）
 	;PS：记得在超级武器注册表[SuperWeaponTypes]上注册这个超级武器
   
-<center><font color=#FF0000><font color=#FF0000 size=6 face="Arial">零基础小白也能看得懂的红色警戒2 DIY基础介绍 V1.0</font><center>
+<center><font color=#FF0000><font color=#FF0000 size=6 face="Arial">DIY的初步了解 - 零基础小白也能看得懂的红警 DIY 基础介绍 V1.0</font><center>
+
 <strong>BY Daylily<strong> 
