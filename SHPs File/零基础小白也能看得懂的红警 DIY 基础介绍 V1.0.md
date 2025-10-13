@@ -51,7 +51,7 @@ TooBigToFitUnderBridge=true
   
 在 [AEGIS] 标签的下方可以看到这个语句`Primary=Medusa`，我们可以把`Primary`和`Medusa`分成两部分来看，`Primary`可以看作是`武器类型`，`Medusa`则是`武器`（不难看出，这行代码给单位指定了 [Medusa] 作为它的武器），下面先来认识一下`武器类型`：  
 
-- 主武器`Primary=`：单位的主要武器，以及单位的三星主武器`ElitePrimary=`，单位升级至三星后会立即换用`ElitePrimary=`所指定的武器，需要注意的是，不能升级的单位是没有这个语句的，或者出现没有指定武器、`ElitePrimary=`被注释等情况，一般常见于平民单位，以及遥控坦克、工程师等，即便强制升级到三星，也会因为没有`ElitePrimary=`语句，而继续使用`Primary=`。 
+- 主武器`Primary=`：单位的主要武器，以及单位的三星主武器`ElitePrimary=`，单位升级至三星后会立即换用`ElitePrimary=`所指定的武器，需要注意的是，有的单位是没有这种语句的，或者出现没有指定武器、`ElitePrimary=`被注释等情况，一般常见于平民单位，以及遥控坦克、工程师等，即便升级到三星，也会因为没有`ElitePrimary=`语句，而继续使用`Primary=`。 
 
 - 副武器`Secondary=`：单位的次要武器，以及三星副武器`EliteSecondary=`。例如天启坦克攻击飞行单位所使用的副武器`Secondary=MammothTusk`，但天启坦克没有三星副武器，所以无论有没有升级，都始终使用`Secondary=`所指定的武器。
 
@@ -98,12 +98,8 @@ AnimList=XGRYSML1,XGRYSML2,EXPLOSML
 ProneDamage=100%  
 ```  
 这些内容便是`武器`的中的`抛射体`和`弹头`，武器的*具体属性*都要通过它们设置，例如用抛射体决定武器是否隔着围墙也能打到对面`SubjectToWalls=`，以及在弹头的设置中对某种车辆或建筑的装甲造成特定的伤害比例`Verses=`，这些我们在之后都会讲到。  
- 
   
-
-  
-
-  我们来简单了解一下什么是*单位*，单位的类型有很多，例如：车辆、步兵、建筑、海军、和空军等等都可以称作*单位*。其中，车辆、直升机、飞艇、飞碟及海军为*载具*（具体分类会在下面介绍）。  
+  现在我们来简单了解一下什么是*单位*，单位的类型有很多，例如：车辆、步兵、建筑、海军、和空军等等都可以称作*单位*。其中，车辆、直升机、飞艇、飞碟及海军为*载具*（具体分类会在下面介绍）。  
 ※运动方式  
   Locomotor=运动模式  
   MovementZone=寻路方式  
@@ -129,11 +125,11 @@ ProneDamage=100%
 部分常用注册表：  
 [InfantryTypes] ;注册步兵单位(Infantry)  
   
+[AircraftTypes]  ;注册空军单位(Aircraft)  
+  
 [VehicleTypes]  ;注册载具(Vehicle)  
   
 需要注意，夜莺直升机和基洛夫空艇的运动方式实际上为 Hover 悬浮速度类型，Hover 一般是归类为*载具*（即 Vehicle，而非 Aircraft）
-  
-[AircraftTypes]  ;注册空军单位(Aircraft)  
   
 [BuildingTypes]  ;注册建筑单位(Building)  
   
@@ -143,15 +139,18 @@ ProneDamage=100%
   
 [Warheads]  ;注册弹头  
   
-[WeaponTypes]  ;Ares内容，选择性了解  
+[WeaponTypes]  ;Ares引擎内容，选择性了解  
   
-※超级武器  
+※超级武器  ;有Ares引擎内容，选择性了解  
   
 （待完善）  
   
-[SuperWeaponTypes]  ;Ares内容，选择性了解
+[SuperWeaponTypes]
   
-※粒子武器  
+※粒子系统  
+  
+[Particles]  ;注册粒子
+[ParticleSystems]  ;注册粒子系统
   
 （待完善） 
   
@@ -193,13 +192,17 @@ Name=Aegis Cruiser  ;名字全称，可随便填写，实际游戏中无作用
 
 Prerequisite=GAYARD,RADAR  ;建造前提（例如造V3火箭需要雷达）
 
-Primary=Medusa  ;主武器（神盾巡洋舰是没有副武器的，当然，你也可以手动在单位主体中添加副武器语句）
+Primary=Medusa  ;主武器（神盾巡洋舰是没有副武器的，当然，你也可以手动在单位本体中添加副武器语句）  
 
-NavalTargeting=6  ;
+;Secondary=  ;副武器（示例）  
 
-LandTargeting=1  ;
+;EliteSecondary=  ;三星副武器（示例） 
 
-ToProtect=yes
+NavalTargeting=6  ;6
+
+LandTargeting=1  ;1
+
+ToProtect=yes  ;重点保护对象（对AI有用，当这个单位被攻击时，AI会调用闲置单位过来保护（只保护已方单位，不包括盟友）
 
 Category=AFV
 
@@ -245,19 +248,19 @@ DistributedFire=yes
 
 Explosion=TWLT070,S_BANG48,S_BRNL58,S_CLSN58,S_TUMU60
 
-VoiceSelect=AegisSelect  ;语音
+VoiceSelect=AegisSelect  ;单位被玩家选中时的语音
 
-VoiceMove=AegisMove  ;语音
+VoiceMove=AegisMove  ;玩家命令其移动时的语音
 
-VoiceAttack=AegisAttackCommand  ;语音
+VoiceAttack=AegisAttackCommand  ;玩家命令其攻击时语音
 
-VoiceFeedback=  ;语音
+VoiceFeedback=  ;单位害怕时的语音（一般步兵才有害怕语音，例如动员兵低血量时会害怕地叫妈咪...可自行添加）
 
-DieSound=  ;语音
+DieSound=  ;单位被摧毁的声音（单位被摧毁时的声音，而步兵一般是指死亡语音，例如各种惨叫声，可自行添加）
 
-SinkingSound=GenLargeWaterDie
+SinkingSound=GenLargeWaterDie  ;船被击毁后沉入水底的声音
 
-MoveSound=AegisMoveStart
+MoveSound=AegisMoveStart  ;移动的声音，例如坦克的轮子移动时发出的声音
 
 Locomotor={2BEA74E1-7CCA-11d3-BE14-00104B62A16C}
 
@@ -269,9 +272,9 @@ ThreatPosed=25
 
 DamAGeParticleSystems=SparkSys,SmallGreySSys
 
-VeteranAbilities=STRONGER,FIREPOWER,ROF,SIGHT,FASTER
+VeteranAbilities=STRONGER,FIREPOWER,ROF,SIGHT,FASTER ;单位一星时赋予的额外增益属性，STRONGER 表示单位护甲获得额外加成（可以理解成更 “抗揍” 了，但单位总血量是不变的），还有 FIREPOWER 代表攻击力加成、ROF 代表攻击速度提升、SIGHT 视野变广、FASTER 移动速度变快。具体增益数值在全局代码中统一定义。
 
-EliteAbilities=SELF_HEAL,STRONGER,FIREPOWER,ROF
+EliteAbilities=SELF_HEAL,STRONGER,FIREPOWER,ROF ;单位三星时赋予的额外增益属性，其中 SELF_HEAL 表示单位获得自动治愈能力（自动回血）。
 
 ElitePrimary=MedusaE
 
@@ -470,8 +473,8 @@ DIY 新手需要善用搜索功能，在说明书或 [DIYRA2在线词典](https:
   
   
   答案：  
-  1.选B，Speed=在单位本体中代表单位移动速度。Range=在武器本体中代表攻击范围，Report=在武器本体中是开火声音，ROF=在武器本体中是攻击间隔，ROT=在抛射体中控制弹体的拐弯程度。
-  2.选ABE，Strength=在单位本体中代表单位生命值，Turret=在单位本体中代表是否有炮塔，Report=在武器本体中指开火声音，Speed=在武器本体中代表弹体飞行速度（注意区分单位本体中的Speed=），Inviso=可在抛射体中控制该抛射体是否不可见。
+  1、选B，Speed=在单位本体中代表单位移动速度。Range=在武器本体中代表攻击范围，Report=在武器本体中是开火声音，ROF=在武器本体中是攻击间隔，ROT=在抛射体中控制弹体的拐弯程度。  
+  2、选ABE，Strength=在单位本体中代表单位生命值，Turret=在单位本体中代表是否有炮塔，Report=在武器本体中指开火声音，Speed=在武器本体中代表弹体飞行速度（注意区分单位本体中的Speed=），Inviso=可在抛射体中控制该抛射体是否不可见。
   
 实际效果：
 
@@ -613,10 +616,10 @@ null
 
   
 ※作者的一些话：  
-Modder 作为一个广泛性的词，不能很好地区分经验丰富的 DIY 大佬与 DIY 新人，而它们之间存在着 “隐形” 的分界线，且社区对新手的包容度是有限的（例如默认了新手使用 Ares 引擎），使新手获取帮助的方式变得些许曲折，一些新人由于没有使用论坛的经验，容易出现 “在错误的板块中提出‘错误’的问题” 或直接伸手要资源的情况，迎来了管理员劈头盖脸的责骂，甚至一记飞踢到垃圾桶，这种心情能够理解。其实，我是希望大家能够在论坛中多多交流、友好讨论，大佬与新人之间经常互相帮助，但可惜，环境不允许，人性是贪婪的，大量新人索求帮助和资源，只能使论坛的管理愈加严格，并设置入场券等资源门槛，防止创作者们的作品不被滥用。所以，作为 DIY 新人，应先懂得尊重别人的劳动成果，通过不断地学习，做出一个属于自己的优秀的作品，一步步 “填充” 自己的知识储备量，总比剽窃别人的东西并声称是自己的这种行为来得 “充实” 得多，要实干、多做，有想法就要自己尝试去实现，不要希望天上掉馅饼，这就是我想对 DIY 新人说的话。  
+Modder 作为一个广泛性的词，不能很好地区分经验丰富的 DIY 大佬与 DIY 新人，而它们之间存在着 “隐形” 的分界线，且社区对新手的包容度是有限的（例如默认了新手使用 Ares 引擎），使新手获取帮助的方式变得些许曲折，一些新人由于没有使用论坛的经验，容易出现 “在错误的板块中提出‘错误’的问题” 或直接伸手要资源的情况，迎来了管理员劈头盖脸的责骂，甚至一记飞踢到垃圾桶，这种心情能够理解。其实，我是希望大家能够在论坛中多多交流与分享，大佬与新人之间的友好讨论，但可惜，环境不允许，人性是贪婪的，大量新人索求帮助和资源，只能使论坛的管理愈加严格，并设置入场券等资源门槛，防止创作者们的作品不被滥用。所以，作为 DIY 新人，应先懂得尊重别人的劳动成果，通过不断地学习，做出一个属于自己的优秀的作品，一步步 “填充” 自己的知识储备量，总比剽窃别人的东西并声称是自己的这种行为来得 “充实” 得多，要实干、多做，有想法就要自己尝试去实现，不要希望天上掉馅饼，这就是我想对 DIY 新人说的话。  
   
-※本人因为考虑到红警 DIY 圈的这种复杂环境，所以我制作了这篇针对新人的红警 DIY 介绍文章，希望能降低新手接触 DIY 的门槛。可能一些新人比较敬畏大佬，无形当中也增设了交流门槛，但我希望大家能在论坛中对大佬发布的资源或工具勇敢提出一些意见，希望新人不要因为论坛的管理方式而胆怯或放弃，你们口中的大佬，实际上也和我们一样是对 DIY 充满热情的爱好者和普通玩家，有些元老虽然离开了论坛，但有些人依旧在坚守，似乎是在捍卫着这片 “净土” ，愿意保护曾经的创作者留下来的心血，这或许也是RA2DIY论坛能够坚持下来的原因，因为他们都在用爱发电啊（
-
+※本人因为考虑到红警 DIY 圈的这种复杂环境，所以我制作了这篇针对新人的红警 DIY 介绍文章，希望能降低新手接触 DIY 的门槛。可能一些新人比较敬畏大佬，无形当中也增设了交流门槛，但我希望大家能在论坛中对大佬发布的资源或工具勇敢提出一些意见，希望新人不要因为论坛的管理方式而胆怯或放弃，你们口中的大佬，实际上也和我们一样是对 DIY 充满热情的爱好者和普通玩家，有些元老虽然离开了论坛，但有些人依旧在坚守，愿意保护曾经的创作者们留下来的心血，似乎是在捍卫着这片 “净土”，这或许也是RA2DIY论坛能够坚持下来的原因，因为他们都在用爱发电啊（
+  
 #### Tips（小窍门和提示） 
 ※ Ares 引擎增强了查错功能，你可以鼠标右键对 RunAres.bat 进行编辑，用记事本或者其他的代码查看器打开，改成以下字段：  
     
