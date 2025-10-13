@@ -32,9 +32,9 @@ HTML（初学）
 ## 其他
 
 说明书及引擎：  
-- Ares 引擎下载：[Ares下载页面](https://launchpad.net/ares/+download)（选择[目前最新版 3.0p1 ](https://launchpad.net/ares/3.0/3.0p1/+download/ares_3.0p1.zip)下载并解压至游戏目录即可）
+- Ares 引擎下载：[Ares下载页面](https://launchpad.net/ares/+download)（选择[目前最新版 3.0p1 ](https://launchpad.net/ares/3.0/3.0p1/+download/ares_3.0p1.zip)下载并解压至游戏目录，点击 RunAres.bat 就能用 Ares 引擎启动游戏了）
 - Ares 使用手册中文翻译版： [Ares 3.0 中文说明书（网页版）](https://ares-china.github.io/Ares-Manual/)、[Ares 3.0 中文说明书CHM文件（文件版）](https://pan.baidu.com/s/1t3p23uVwpXn32OX_4db3MQ?pwd=3jj2)
-- Phobos 引擎下载：[Phobos 下载页面](https://github.com/Phobos-developers/Phobos/releases)（选择 Release 稳定版或 Pre-release 预览版，将 Phobos.dll 和 Phobos.pdb 下载至游戏目录即可）
+- Phobos 引擎下载：[Phobos 下载页面](https://github.com/Phobos-developers/Phobos/releases)（选择 Release 稳定版或 Pre-release 预览版，将 Phobos.dll 和 Phobos.pdb 下载至游戏目录即可，建议和 Ares 一起安装）
 - Phobos 使用手册中文翻译版：[Phobos 中文说明书（网页版）](https://phobos.readthedocs.io/zh-cn/latest/)
 - 更多详细在线中文教程合集：[2019 年版入门教程](https://docs.qq.com/doc/p/99db114aba903e9ab82f7546990244dc9bf60ad3)
   
