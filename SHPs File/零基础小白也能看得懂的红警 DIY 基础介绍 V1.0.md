@@ -536,14 +536,15 @@ null
   下面我们来了解一下地图编辑器（以下简称地编），我们若要修改地图，就要用到地编，打开这些地图文件：  
   
 
-    ※特别提醒，需要改动地图时，最好手动备份一下地图文件。以及不应出现修改地图文件内代码的同时，又打开地编对其进行修改的情况。
+※特别提醒，需要改动地图时，最好手动备份一下地图文件。不应出现修改地图文件内代码的同时，又打开地编对其进行修改的情况。  
+※RA2 原版DIY玩家则需使用旧版的地编，里面的许多内容是相似的，所以不用担心。这里推荐使用 FA2SP，这应该是最后一个支持 RA2 原版的地编，下载：[FA2SP 1.6.2 安装包](https://pan.baidu.com/s/1u_zecwvom5cL9mt91qSDSw?pwd=RA2M) 。	  
 	
   ※这里准备介绍韩大妈的 [HDM Edition](https://github.com/handama/FA2sp/releases)  
-（以下简称HDM）
+（以下简称HDM）  
   
-  ※这里准备介绍Rampastring的 [WorldAlteringEditor](https://github.com/CnCNet/WorldAlteringEditor/releases)
-（以下简称WAE）
-※（这里推荐一下TX地形）
+  ※这里准备介绍Rampastring的 [WorldAlteringEditor](https://github.com/CnCNet/WorldAlteringEditor/releases)  
+（以下简称WAE）  
+※（这里推荐一下TX地形）  
 
   
   
