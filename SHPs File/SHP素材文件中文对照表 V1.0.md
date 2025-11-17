@@ -6,8 +6,8 @@
 
 ## 注意事项：
 - 有些shp官方未注册，例如在artmd.ini中的apmuzzle天启坦克开火、yuricntl尤里攻击，即便在地图文件（yrm、map等）中注册也无法修复，需要单独注册在规则文件(rules.ini, rulesmd.ini)，若没有使用规则文件，则须在地图文件中另外注册并替换。
-- 有的shp是制作组遗留下来的产物，例如红警2(RA2)的前身"泰伯利亚之日(TS)"游戏的素材，若要使用遗留的素材通常要进行调整（例如修改规则文件、换用正确的色盘来显示等），以及一些用来测试的shp可能会没有色盘或者找不到对应的注册名，有的虽然注册了也添加了色盘，但游戏里没有使用这个素材等等，均为正常现象。（游戏还存在诸多遗留的硬编码，在DIY过程中可能会遇到无法解决的硬性问题，可尝试安装ares或phobos等平台，能改善或解决很多问题）
-- 由于文件实在太多，而且本人DIY水平也不高，就只能粗略地进行分类了，可能还有描述错误或遗漏的地方，还请见谅... 一些地方打了问号`？`，表示我也不确定是什么东西... 需要注意的是，shp存在`共用现象`，例如美国大兵射击地面的效果PIFFPIFF，游戏经常使用在其他单位上，以及坦克、船只还有步兵都可能会用到的120mm炮弹等等，泛用性很高。还有每个阵营的工程师共用engineer单个shp，“技师”与“绿衣男平民”共用单个shp，超时空传送共用同种传送动画等等，都是使用同一种素材，更多的我就不列举了。还有一些我认为会经常用到或者合适拿来DIY的动画效果，我会给它们备注`通用素材`给大家参考。
+- 有的shp是Westwood(西木)制作组遗留下来的产物，例如红警2(RA2)的前身"命令与征服2：泰伯利亚之日"(TS2)游戏的素材，若要使用遗留的素材通常要进行调整（例如修改规则文件、换用正确的色盘来显示等），以及一些用来测试的shp可能会没有色盘或者找不到对应的注册名，有的虽然注册了也添加了色盘，但游戏里没有使用这个素材等等，均为正常现象。（游戏还存在诸多遗留的硬编码，在DIY过程中可能会遇到无法解决的硬性问题，推荐安装ares或phobos等平台，能改善或解决很多问题）
+- 由于文件实在太多，而且本人DIY水平也不高，就只能粗略地进行分类了，可能还有描述错误或遗漏的地方，还请见谅... 一些地方打了问号`？`，表示我不确定是什么东西或者不知道怎么解释... 需要注意的是，shp存在*共用现象*，例如美国大兵射击地面的效果PIFFPIFF，游戏经常使用在其他单位上，以及坦克、船只还有步兵都可能会用到的120mm炮弹等等，泛用性很高。还有每个阵营的工程师共用engineer单个shp，“技师”与“绿衣男平民”共用单个shp，超时空传送共用同种传送动画等等，都是使用同一种素材，更多的我就不列举了。还有一些我认为会经常用到或者合适拿来DIY的动画效果，我会给它们备注`通用素材`给大家参考。
 
 * 以下所有shp文件使用了 XCC Mixer 1.47 提取，提取位置已标明，这些shp素材 ***仅包含单位、建筑、动画及建造栏图标！***，其他shp或素材均未提取（tem覆盖图文件或其他零碎素材等）。
 
@@ -20,7 +20,7 @@
     120mm        炮弹（坦克、驱逐舰、防空步兵等单位开火后的出膛炮弹，通用素材)
     50cal        两帧会动的点？（啥玩意）
     bbblelrg     潜艇抛射体产生的气泡
-    beacon       信标（泰伯利亚的
+    beacon       信标（泰伯利亚的shp，如果颜色显示不正确，一般换用泰伯利亚的对应色盘即可正确显示，下同
     bomb         正在旋转的炸弹（泰伯利亚
     buildngz     给建筑用的色盘？
     canister     正在旋转的霰弹筒（泰伯利亚
@@ -29,13 +29,13 @@
     chronodb     离子炮爆炸？（泰伯利亚
     chronofs     离子炮爆炸？（球状）（泰伯利亚
     chronosb     离子炮爆炸？（泰伯利亚
-    crat0a       ？
-    crat0b       ？
-    crat0c       ？
-    crat01       ？
-    crat02       ？
-    crat03       ？
-    crat04       ？
+    crat0a       弹坑？（泰伯利亚
+    crat0b       弹坑？（泰伯利亚
+    crat0c       弹坑？（泰伯利亚
+    crat01       弹坑？（泰伯利亚
+    crat02       弹坑？（泰伯利亚
+    crat03       弹坑？（泰伯利亚
+    crat04       弹坑？（泰伯利亚
     dbris1lg     摧毁建筑后蹦出的碎片1lg
     dbris1sm     摧毁建筑后蹦出的碎片1sm
     dbris2lg     摧毁建筑后蹦出的碎片2lg
@@ -68,10 +68,10 @@
     discus       铁饼（泰伯利亚）
     dragon       较长的导弹（黄蜂、入侵者战机、黑鹰战机等单位发射的导弹，通用素材
     dredmiss     正在旋转的导弹（泰伯利亚
-    droppod      ？（好像是泰伯利亚用来测试的东西，看起来像香蕉皮
-    droppod2     ？（好像是泰伯利亚用来测试的东西，看起来像香蕉皮
-    drum01       ？
-    drum02       ？
+    droppod      空降仓逐渐消失动画，朝左（泰伯利亚
+    droppod2     空降仓逐渐消失动画，朝右（泰伯利亚
+    drum01       桶（泰伯利亚
+    drum02       桶2（泰伯利亚
     durasmoke    导弹尾焰（类似无畏舰发射导弹的尾焰，但这个小一点
     e_enhn       黄色地块
     ebtn-dn      ？（往下按的按钮？
@@ -96,10 +96,10 @@
     null         ？（打不开，估计是真的 null，无效的shp
     oilleak      石油泄露（泰伯利亚
     oregath      矿车采矿吸取矿石？（好像art里找不到注册名
-    palet01      ？
-    palet02      ？
-    palet03      ？
-    palet04      ？
+    palet01      调色板？
+    palet02      调色板？
+    palet03      调色板？
+    palet04      调色板？
     parabomb     空投炸弹（未使用素材
     parach       空降伞
     patriot      导弹（未使用素材
@@ -107,16 +107,16 @@
     pips         这是单位血条的素材，例如单位头顶血条的绿色黄色红色像素就是用它来显示，还有单位升星的图标，占领医院后在血条后方显示的红十字治疗图标等等都在这里（注意要选择红警一的色盘）
     pips2        剩余弹药颜色，运输船下方的容量框显示的颜色等等（注意要选择红警一的色盘）
     place        地表
-    pmatkmove    攻击（泰伯利亚的图标   
-    pmgrdarea    保护（泰伯利亚的图标  
-    pod          ？（香蕉皮
-    podring      空降仓进入大气层时使用的动画40帧（未使用素材
+    pmatkmove    攻击（泰伯利亚   
+    pmgrdarea    保护（泰伯利亚  
+    pod          空降仓，左右视图（泰伯利亚
+    podring      空降仓使用的落地动画40帧（未使用素材
     progbar      项目条？
     progbar2     项目条2？
     progbarm     项目栏？
     psiwarn      心灵探测器预测核弹的攻击位置（但游戏显示的色盘不对
     pulsball     推出去的球？（泰伯利亚
-    select       选取（泰伯利亚？
+    select       选择框（泰伯利亚，选取单位时会有一个方框
     sgrysmk1     浓烟（建筑残血后冒出的浓烟，通用素材
     shroud       覆盖物色盘？
     ship         ？（他说是船，好吧
@@ -225,7 +225,7 @@
     brrlexp1     小油桶爆炸
     brrlexp2     大油桶爆炸
     crivexp      疯狂伊文弹头动画
-    crivexp2     疯狂伊文三星弹头动画
+    crivexp2     疯狂伊文三星弹头动画（未使用素材
     demtexp      自爆卡车弹头动画
     explolrg     大爆炸（武装直升机副武器三星弹头等，通用素材
     explomed     中爆炸（磁悬幽浮坠落到地面的爆炸动画，游戏中少见的爆炸，通用素材
@@ -296,7 +296,7 @@
     shroudx      失去全图视野（正常对局未使用，使用泰伯利亚 anim.pal 色盘可正确显示
     speed        速度	
                  金矿（正常对局未使用，类似矿柱，拾取后金矿会在原地蔓延，这个是tem覆盖图文件，就没有提取了
-    twlt070      爆炸类型1（正常对局未使用，多重爆炸效果，对任何单位都有伤害，也是桥被炸断的其中一种效果
+    twlt070      爆炸类型1（正常对局未使用，多重爆炸效果，对任何单位都有伤害。这个爆炸素材还被用在桥被炸断后的其中一种视觉效果
     twlt100      爆炸类型2（正常对局未使用，一次大爆炸，比类型1伤害高，但似乎对建筑无伤害
 	veteran      升级
 	wccloud1     毒气（正常对局未使用，调用的是闪电风暴的乌云图像，且强制使用anim.pal色盘，可换成其他使用anim.pal色盘的图像
@@ -304,7 +304,7 @@
 ##### 工具箱注册表[Powerups]（可在规则文件里搜索这个注册表并修改它的数据）
 - *可进一步修改全局注册表中的数据[CrateRules]: 例如箱子生效范围 CrateRadius=3.0(3.0为5x5面积,2.0为3x3面积)*
 - *部分箱子的参数是无效的，可根据情况在其他配置文件中修改数据（例如增加 Gas 这类箱子的图像附加伤害，可在 art.ini 中写伤害和弹头：Damage=、Warhead=）* 
-- *注：工具箱注册表无法正常读取在地图文件内注册的动画，也无法在地图文件内使用这个注册表，应在规则文件内修改* 
+- *注：工具箱注册表无法正常读取在地图文件内注册的动画，也无法在地图文件中使用这个注册表，应在规则文件内修改* 
 
  `为方便查看，将“=”纵向对齐（突发强迫症）`  
   
@@ -325,7 +325,7 @@
              IonStorm=0,<none>,yes        ; 引起离子风暴【无效】  
                   Gas=0,<none>,yes,100    ; 泰伯利亚气体（毒气）>参数：每团气体云造成100伤害【参数无效】（默认图像 wccloud1）  
              Tiberium=0,<none>,no         ; 泰伯利亚矿（金矿），拾取后生成金矿并在原地蔓延  
-                  Pod=0,<none>,no         ; 获得一次DropPod【无效】（泰伯利亚遗留  
+                  Pod=0,<none>,no         ; 获得一次DropPod【无效】（泰伯利亚遗留空降仓功能  
                 Cloak=0,CLOAK,yes         ; 附近5x5范围单位获得隐形  
              Darkness=0,SHROUDX,yes       ; 关闭全图（间谍渗透雷达效果  
             Explosion=0,<none>,yes,500    ; 大爆炸>参数：每次爆炸产生500的伤害  
@@ -362,11 +362,215 @@
     nukedie      辐射融化（被辐射而融化 InfDeath=7
     yuridie      震荡成碎片（被尤里的副武器震荡成碎片 InfDeath=6
 
-### 二、建造栏图标：（位置：language.mix > cameo.mix）
+### 二、建造栏图标：（位置：language.mix > cameo.mix） 
+    adogicon     盟军警犬
+    adoguico     盟军警犬一星（未使用图标
+    aengicon     盟军工程师（未使用图标，箱子上有盟军图案
+    aenguico     盟军工程师一星（未使用图标，箱子上有盟军图案
+    agapgen      裂缝产生器（未使用图标，需要泰伯利亚的图标色盘
+    agisicon     神盾巡洋舰
+    ahrvicon     超时空矿车
+    ahrvuicon    超时空矿车一星（未使用图标
+    aparicon     空降部队(美国伞兵)
+    asaticon     间谍卫星
+    ayaricon     造船厂(盟军船厂)
+    beagicon     黑鹰战机
+    bolticon     闪电风暴
+    brrkicon     盟军兵营
+    carricon     航空母舰
+    ccomicon     超时空突击队
+    ccomuico     超时空突击队一星
+    chroicon     超时空转换
+    clegicon     超时空军团兵
+    cleguico     超时空军团兵一星
+    clonicon     复制中心
+    cnsticon     盟军建造厂（未使用图标，需要泰伯利亚图标色盘
+    csphicon     超时空传送仪
+    darken       ？（好像是图标背景的形状
+    desoicon     辐射工兵
+    desouico     辐射工兵一星
+    desticon     驱逐舰
+    dlphicon     海豚
+    dlphuico     海豚一星（未使用图标，需要泰伯利亚图标色盘
+    dogicon      苏军警犬
+    doguico      苏军警犬一星（未使用图标
+    dredicon     无畏级战舰
+    dronicon     恐怖机器人
+    e1icon       动员兵（未使用图标，需要泰伯利亚图标色盘
+    e1uico       动员兵一星（未使用图标，需要泰伯利亚图标色盘
+    e2icon       动员兵
+    e2uico       动员兵一星
+    engnicon     工程师（阵营通用图标
+    falcicon     入侵者战机
+    fixicon      盟军维修厂
+    flakicon     防空炮
+    flkticon     防空步兵
+    flktuico     防空步兵一星
+    forticon     堡垒轰炸机（未使用图标，需要泰伯利亚图标色盘
+    fvicon       多功能步兵车
+    fvuico       多功能步兵车一星
+    gapicon      裂缝产生器
+    gcanicon     巨炮
+    giicon       美国大兵
+    giuico       美国大兵一星
+    gorep        矿石精炼器
+    gtnkicon     灰熊坦克
+    gtnkuico     灰熊坦克一星
+    gwepicon     盟军战车工厂
+    handicon     苏军兵营
+    harvicon     武装采矿车
+    harvuico     武装采矿车一星
+    heliicon     空指部(盟军雷达)
+    hindicon     雌鹿运输机（未使用图标，需要泰伯利亚图标色盘
+    hovricon     海蝎
+    htkicon      防空履带车
+    htkuico      防空履带车一星
+    htnkicon     犀牛坦克
+    htnkuico     犀牛坦克一星
+    ircricon     无敌
+    ivanicon     疯狂伊文
+    ivanuico     疯狂伊文一星（未使用图标，疯狂伊文无法通过间谍偷兵营升星，弃用图标
+    ivncicon     超时空伊文
+    ivncuico     超时空伊文一星（未使用图标，超时空伊文无法通过间谍偷兵营升星，弃用图标
+    jjeticon     火箭飞行兵
+    jjetuico     火箭飞行兵一星
+    landicon     两栖运输艇(盟军运输船)
+    mcvicon      盟军机动基地车(盟军基地车)
+    mcvuico      盟军机动基地车一星（未使用图标
+    msslicon     核弹发射井
+    mtnkicon     天启坦克
+    mtnkuico     天启坦克一星
+    npwricon     磁能反应炉(苏军电厂)
+    nradicon     苏军雷达
+    nrcticon     核子反应堆
+    nreficon     苏军矿石精炼厂
+    ntchicon     苏军作战实验室
+    nukeicon     核弹攻击
+    nwalicon     苏军围墙
+    nwepicon     苏军战车工厂
+    paraicon     伞兵（这是占领科技机场给的伞兵，美国伞兵的图标是：空降部队
+    pillicon     机枪碉堡
+    plticon      哨戒炮
+    powricon     发电厂(盟军电厂)
+    prisicon     光棱塔
+    psicicon     心灵突击队
+    psicuico     心灵突击队一星
+    psisicon     心灵探测器
+    psiticon     超能力部队（未使用图标
+    psituico     超能力部队一星（未使用图标
+    reficon      盟军矿石精炼厂
+    rfixicon     维修工厂(苏军维修厂)
+    rtnkicon     幻影坦克
+    rtnkuico     幻影坦克一星
+    samicon      爱国者飞弹
+    sapcicon     装甲运兵船(苏军运输船)
+    sealicon     海豹部队
+    sealuico     海豹部队一星
+    shadicon     夜莺直升机
+    shaduico     夜莺直升机一星
+    shkicon      磁爆步兵
+    shkuico      磁爆步兵一星
+    smcvicon     苏联机动基地车(苏军基地车)
+    smcvuico     苏联机动基地车一星（未使用图标
+    snipicon     狙击手
+    snipuico     狙击手一星
+    spyicon      间谍
+    spyuico      间谍一星（未使用图标
+    sqdicon      巨型乌贼
+    sreficon     光棱坦克
+    srefuico     光棱坦克一星
+    stnkicon     隐形坦克
+    subicon      攻击潜艇(苏军潜艇)
+    tanyicon     谭雅
+    tanyuico     谭雅一星
+    techicon     盟军作战实验室
+    tempicon     图标方框背景
+    teslaicon    磁暴线圈（未使用图标，需要泰伯利亚图标色盘
+    tnkdicon     坦克杀手
+    tnkduico     坦克杀手一星
+    trkaicon     自爆卡车
+    trsticon     恐怖分子
+    trstuico     恐怖分子一星（未使用图标
+    tslaicon     磁暴线圈
+    ttnkicon     磁能坦克
+    ttnkuico     磁能坦克一星
+    v3icon       V3火箭(V3火箭发射车)
+    v3uico       V3火箭(V3火箭发射车)
+    wallicon     盟军围墙
+    wethicon     天气控制机(天气控制器)
+    xxicon       Missing Cameo - 图标缺失时显示的通用图标
+    yardicon     船坞(苏军船厂)
+    yuriicon     尤里
+    yuriuico     尤里一星
+    yurpicon     尤里改
+    yurpuico     尤里改一星
+    zepicon      基洛夫空艇
+    zepuico      基洛夫空艇一星
+    
+#### 泰伯利亚之日的残留图标
+*泰伯利亚除了图标，对应的一些模型也有残留，需要的可以去mix里找找*  
+*英文名大部分摘自泰伯利亚游戏中显示的图标名称，官方没有中文译名，故采用社区翻译或衍生作品所使用的译名，若遇到音译或翻译不准确的问题，还请见谅*  
+    apchicon     （泰伯利亚，Harpy - 哈比武装直升机
+    apcicon      （泰伯利亚，Amphibious APC - 两栖运兵车
+    artyicon     （泰伯利亚，Artillery - 自行火炮
+    batricon     （泰伯利亚，Battery - 电池
+    bggyicon     （泰伯利亚，Attack Buggy - 突袭者四驱车
+    chemicon     （泰伯利亚，Chemical Missile - 化学飞弹
+    clckicon     （泰伯利亚，Stealth Generator - 隐形发生器(提供范围隐身)
+    crryicon     （泰伯利亚，Orca Transport - 奥卡运输机(运输步兵)
+    detnicon     （泰伯利亚，Hunter Seeker - 狩猎者
+    e4icon       （泰伯利亚，Rocket Infantry - 火箭兵
+    empicon      （泰伯利亚，EMP Cannon - 电磁脉冲炮
+    facticon     （泰伯利亚，Construction Yard - 建造厂
+    fsdicon      （泰伯利亚，Fire Storm Generator - 风暴防御中心
+    fspicon      （泰伯利亚，FireStorm Wall Section - 火风暴围墙
+    fstdicon     （泰伯利亚，FireStorm Defense - 火风暴防御(开关)
+    gat2icon     （泰伯利亚，Gate - 闸门(GDI)(面朝西北)
+    gateicon     （泰伯利亚，Gate - 闸门(GDI)(面朝东北)
+    gbayicon     （泰伯利亚，Dropship Bay - 空投支援站
+    hmecicon     （泰伯利亚，Mammoth MK.II - 猛犸 MK.2
+    ioncicon     （泰伯利亚，Ion Cannon - 离子炮
+    lasricon     （泰伯利亚，Laser Fence Post - 激光栅栏(NOD)
+    liteicon     （泰伯利亚，Light - 白色照明光源(灯柱)
+    lpsticon     （泰伯利亚，Mobile Sensor Array - 移动传感器部队(NOD)
+    metricon     （泰伯利亚，Meteor Storm - 陨石风暴
+    mltiicon     （泰伯利亚，Multi Missile - 集束飞弹
+    mmchicon     （泰伯利亚，Taitan - 泰坦机甲
+    mutcicon     （泰伯利亚，变异人步兵，GDI人物左到右：Mutant Sniper(Umagon), McNeil, Ghost Stalker. 
+    nga2icon     （泰伯利亚，Gate - 闸门(NOD)(面朝西北)
+    ngaticon     （泰伯利亚，Gate - 闸门(NOD)(面朝东北)
+    ngaticon     （泰伯利亚，Helipad - 停机坪(NOD)
+    npsiicon     （泰伯利亚，NOD Radar - NOD雷达站
+    obliicon     （泰伯利亚，Obelisk of Light Icons - 光明石碑(光明方尖碑)
+    obmbicon     （泰伯利亚，Orca Bomber - 奥卡轰炸机
+    orcaicon     （泰伯利亚，Orca Fighter - 奥卡战斗机
+    otrnicon     （泰伯利亚，Orca Carryall - 奥卡运输机(运输车辆)
+    plugicon     （泰伯利亚，GDI Upgrade Center - GDI升级中心
+    podsicon     （泰伯利亚，Drop Pod - 空降仓
+    proicon      （泰伯利亚，Banshee - 报丧女妖轰炸机
+    rad1icon     （泰伯利亚，Drop Pod Node - 空降仓节点(需在“GDI升级中心”安装该升级组件后方可使用“空降仓”)
+    rad2icon     （泰伯利亚，Seeker Control - 狩猎者控制器(需在“GDI升级中心”安装该升级组件后方可使用“狩猎者”)
+    rad3icon     （泰伯利亚，Ion Cannon Uplink - 离子炮上行线(需在“GDI升级中心”安装该升级组件后方可使用“离子炮”)
+    radricon     （泰伯利亚，Radar - 雷达站(GDI)
+    rboticon     （泰伯利亚，Mobile Repair Vehicle - 机动维修车
+    sapicon      （泰伯利亚，Subterranean APC - 钻地运兵车
+    sbagicon     （泰伯利亚，Sandbags - 沙袋
+    seekicon     （泰伯利亚，Hunter Seeker Droid - 狩猎者机器人
+    smchicon     （泰伯利亚，Wolverine - 狼獾机甲
+    soniicon     （泰伯利亚，Disruptor - 破坏者(声波坦克)
+    spoticon     （泰伯利亚，Searchlight Tower - 探照灯塔
+    subticon     （泰伯利亚，Devil's Tongue - “恶魔之舌”坦克(钻地喷火坦克)
+    tickicon     （泰伯利亚，Tick Tank - 扁虱坦克
+    towricon     （泰伯利亚，Component Tower - 守卫塔
+    turbicon     （泰伯利亚，Power Turbine - 电力涡轮机(给电厂升级的组件)
+    twr1icon     （泰伯利亚，Vulcan Cannon - 火神机炮(升级组件)
+    twr2icon     （泰伯利亚，RPG - 火箭推进榴弹(升级组件)
+    twr3icon     （泰伯利亚，SAM - 防空导弹(升级组件)
+    weapicon     （泰伯利亚，War Factory - 战车工厂
+    weaticon     （泰伯利亚，Riot Soldier - 镇暴步兵、Elite Cadre - 精英干部、Toxin Soldier - 毒素步兵
+    weedicon     （泰伯利亚，Weed Eater - 收割机
 
-
-***s
-### 三、建筑（不包含覆盖图、地形对象及地形污染等）：
+### 三、建筑（不包含大部分覆盖图、地形对象及地形污染等）：
 
 建筑动画：（位置：ra2.mix > generic.mix）
 
@@ -403,11 +607,11 @@
 	mindanim     被心灵控制塔等控制的单位头顶特效（ControlledAnimationType=
 	mindanimr    被超级武器控制的单位头顶特效：心灵控制器（PermaControlledAnimationType=
 	mutate       被废弃的建造栏图标（基因突变（英文
-    pips         ？（可能是联机用的图标
-    pips2        ？（可能是联机用的图标
+    pips         这是单位血条的素材，例如单位头顶血条的绿色黄色红色像素就是用它来显示，还有单位升星的图标，占领医院后在血条后方显示的红十字治疗图标等等都在这里（注意要选择红警一的色盘）
+    pips2        剩余弹药颜色，运输船下方的容量框显示的颜色等等（注意要选择红警一的色盘）
 	schpdepl     武装直升机展开动画
 	txgasg       绿色病毒气体（病毒狙击手击杀步兵后产生的毒气
-	txgasr       红色病毒气体（游戏未使用的废案
+	txgasr       红色病毒气体（未使用素材，可能是神经毒气的废案
 	ucall3       驻军建筑开火（未使用素材，三个驻军开火动画的拼接
 	uccons       驻军建筑开火（未使用素材
 	ucinit       尤里新兵的驻军开火动画
@@ -444,9 +648,77 @@
 具体细节可到这个段落查看：[跳转](### 鼠标指针shp)，代码查看器(如 HBuilder)可按住 Alt 并单击蓝色字段跳转
 
 ### 二、建造栏图标：（位置：langmd.mix > cameomd.mix）
-
-
-
+    bfrticon     战斗要塞
+	bfrtuico     战斗要塞一星
+	bnkricon     战斗碉堡
+	bplnicon     米格战机（未使用图标
+	brckicon     尤里兵营
+	brisicon     青英战斗兵(鲍里斯)
+	brisuico     青英战斗兵一星
+	bruticon     狂兽人
+	brutuico     狂兽人一星
+	bsubicon     雷鸣潜艇
+	bsubuico     雷鸣潜艇一星（未使用图标
+	caosicon     神经突击车
+	caosuico     神经突击车一星
+	chrpicon     Chrono Prison - 超时空监狱（未使用图标，预留图标？
+	citwicon     护城墙(尤里围墙)
+	clonicon     尤里复制中心
+	diskicon     镭射幽浮
+	diskuico     镭射幽浮一星
+	forcicon     力场护盾
+	gdgiicon     重装大兵
+	gdgiuico     重装大兵一星
+	ggunicon     盖特机炮
+	grndicon     部队回收厂
+	gtncicon     基因突变器
+	indpicon     工业工厂
+	initicon     尤里新兵
+	inituico     尤里新兵一星
+	ltnkicon     狂风坦克
+	ltnkuico     狂风坦克一星
+	lunricon     登月火箭员
+	lunruico     登月火箭员一星
+	mindicon     精神控制车
+	minduico     精神控制车一星
+	muteicon     基因突变
+	pdomicon     心灵控制
+	psisicon     心灵感应器
+	psyricon     心灵控制感测
+	psyticon     心灵控制塔
+	pupticon     心灵控制器
+	rbccicon     控制中心
+    roboicon     遥控坦克
+	robouico     遥控坦克一星（未使用图标
+	samicon      爱国者飞弹（怎么cameomd.mix里也有这个···估计西木不小心放进去了
+	schpicon     武装直升机
+	schpuico     武装直升机一星
+	sminicon     奴隶矿场
+	sminuico     奴隶矿场一星
+	spypicon     侦察机
+	tbnkicon     坦克碉堡
+	teleicon     磁电坦克
+	teleuico     磁电坦克一星
+	vrusicon     病毒狙击手
+	vrusuico     病毒狙击手一星
+	yclnicon     尤里复制人
+	yclnuico     尤里复制人一星
+	yconicon     Con Yard(Construction Yard) - 建造厂（未使用图标，预留图标？
+	yengicon     尤里工程师（未使用图标
+	yenguico     尤里工程师一星（未使用图标
+	yhvricon     装甲运兵船(尤里运兵船)
+	yhvruico     装甲运兵船一星(尤里运兵船)（未使用图标
+	ypcvicon     尤里机动基地车(尤里基地车)
+	ypcvuico     尤里机动基地车一星（未使用图标
+	ypwricon     生化反应炉(尤里电厂)
+	ytchicon     尤里作战实验室
+	ytnkicon     盖特坦克
+	ytnkuico     盖特坦克一星
+	ywepicon     尤里战车工厂
+	yypricon     尤里X
+	yypruico     尤里X一星
+	yyrdicon     海军船坞(尤里船厂)
+	
 ### 三、建筑
 
 Part 1：（位置：ra2md.mix > isoubn.mix）
@@ -646,4 +918,4 @@ Part 3：（位置：ra2md.mix > isourbmd.mix）
 
   
 <center><font color=#FF0000><font color=#FF0000 size=6 face="Arial">红色警戒2 + 尤里的复仇 SHP素材文件中文对照表 V1.0</font><center>
-<strong>BY Daylily<strong>
+<strong>BY DaylilyLG<strong>
