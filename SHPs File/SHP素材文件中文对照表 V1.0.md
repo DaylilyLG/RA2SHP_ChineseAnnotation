@@ -661,7 +661,7 @@
 	bsubicon     雷鸣潜艇
 	bsubuico     雷鸣潜艇一星（未使用图标
 	caosicon     神经突击车
-	caosuico     神经突击车一星
+	caosuico     神经突击车一星（未使用图标
 	chrpicon     Chrono Prison - 超时空监狱（未使用图标，预留图标？
 	citwicon     护城墙(尤里围墙)
 	clonicon     尤里复制中心
@@ -681,7 +681,7 @@
 	lunricon     登月火箭员
 	lunruico     登月火箭员一星
 	mindicon     精神控制车
-	minduico     精神控制车一星
+	minduico     精神控制车一星（未使用图标
 	muteicon     基因突变
 	pdomicon     心灵控制
 	psisicon     心灵感应器
