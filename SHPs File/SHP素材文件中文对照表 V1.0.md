@@ -510,6 +510,7 @@
 #### 泰伯利亚之日的残留图标
 *泰伯利亚除了图标，对应的一些模型也有残留，需要的可以去mix里找找*  
 *英文名大部分摘自泰伯利亚游戏中显示的图标名称，官方没有中文译名，故采用社区翻译或衍生作品所使用的译名，若遇到音译或翻译不准确的问题，还请见谅*  
+    
     apchicon     （泰伯利亚，Harpy - 哈比武装直升机
     apcicon      （泰伯利亚，Amphibious APC - 两栖运兵车
     artyicon     （泰伯利亚，Artillery - 自行火炮
@@ -569,7 +570,7 @@
     weapicon     （泰伯利亚，War Factory - 战车工厂
     weaticon     （泰伯利亚，Riot Soldier - 镇暴步兵、Elite Cadre - 精英干部、Toxin Soldier - 毒素步兵
     weedicon     （泰伯利亚，Weed Eater - 收割机
-
+    
 ### 三、建筑（不包含大部分覆盖图、地形对象及地形污染等）：
 
 建筑动画：（位置：ra2.mix > generic.mix）
