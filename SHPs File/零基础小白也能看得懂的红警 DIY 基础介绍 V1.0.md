@@ -110,7 +110,7 @@ ProneDamage=100%
   常见速度类型：  
   不常见速度类型：（选择性了解）  
   
-  部分其他特殊移动例：  
+  部分其他特殊运动模式：（选择性了解）  
   当配合额外语句`Teleporter=yes`时，单位运动模式会进行切换（例如超时空矿车传送回矿场再开回矿区）。  
   当配合额外语句`IsLocomotor=yes`时，`Locomotor=`一般要设置为`{92612C46-F71F-11d1-AC9F-006008055BB5}`（例如磁电坦克把单位举高高）  
 （待完善）  
@@ -557,10 +557,11 @@ null
 ※如果你能完整看完这整篇 DIY 介绍，相信你是一位对红警 DIY 充满热情的新人~  
 ※好的，到此为止你已经是一名小有能力的 Modder 了，现在可以开始做你的 MOD 了（笑），当然，为了证明自己的学习成果，可以挑战一下章节里的随堂测试和结尾的期末测试，证明自己是不是位 “合格” 的 Modder 哦~ 
   
-看到这里，有兴趣继续学习的小伙伴可以在红警DIY论坛的wiki百科上学习基础语句代码，英语基础好的同学还可以去[modenc](https://modenc.renegadeprojects.com/Category:INI_Flags)，如需文件版的代码手册，可以下载[Tomny大佬的手册](https://pan.baidu.com/s/1j8yji6Mgfrkqi0Bsg36SAQ?pwd=9rwv)（文件版有参考价值，但文件版有过时的内容，且不会更新，还是推荐查看wiki在线版，内容更准确和完整）  
-其他一些可能不怎么用到的配置文件，例如ui(md).ini，就没有介绍了，大家可以自行查阅代码解释。
+看到这里，有兴趣继续学习的小伙伴可以在RA2DIY论坛的 [WIKI](https://wiki.ra2diy.com/w/%E9%A6%96%E9%A1%B5) 上查阅所有语句代码，英语基础好的同学还可以去 [Modenc](https://modenc.renegadeprojects.com/Category:INI_Flags) 网站，如需文件版的中文代码手册，可以下载 [Tomny大佬的手册](https://pan.baidu.com/s/1j8yji6Mgfrkqi0Bsg36SAQ?pwd=9rwv)（文件版有参考价值，但文件版有过时的内容且不会更新，还是推荐查看wiki在线版，内容更准确和完整）。  
 
-（如果有真的难以亲自解决的问题，可直接移步论坛 bbs.ra2diy.com，大多数问题都可以通过搜索或者询问解决，建议先搜索再询问，直接搜索关键词，例如 “动画”、“攻击” 等，多个关键词用空格分开，[推荐使用高级搜索→高级搜索入口](https://bbs.ra2diy.com/search.php?mod=forum&adv=yes)）  
+由于本次的 DIY 介绍是尽量避开 Ares 或 Phobos 扩展引擎的有关语句或代码的，所以如果要了解进阶的 DIY 内容，可以查看这些引擎的说明书哦！链接和下载地址以及各种可能用到的工具都放在最底下了~ 
+  
+其他一些可能不怎么用到的配置文件，例如ui(md).ini，就没有介绍了，大家可以自行查阅代码解释。（如果有真的难以亲自解决的问题，可直接移步论坛 bbs.ra2diy.com，大多数问题都可以通过搜索或者询问解决，建议先搜索再询问，直接搜索关键词，例如 “动画”、“攻击” 等，多个关键词用空格分开，[推荐使用高级搜索→高级搜索入口](https://bbs.ra2diy.com/search.php?mod=forum&adv=yes)）  
   
 # 期末测试  
   （PS：这人真的好喜欢出题！对于新手来说可能有“超纲”，请别在意...）  
@@ -651,8 +652,9 @@ null
 ※作者的一些话：  
 Modder 作为一个广泛性的词，不能很好地区分经验丰富的 DIY 大佬与 DIY 新人，而它们之间存在着 “隐形” 的分界线，且社区对新手的包容度是有限的（例如默认了新手使用 Ares 引擎），使新手获取帮助的方式变得些许曲折，一些新人由于没有使用论坛的经验，容易出现 “在错误的板块中提出‘错误’的问题” 或直接伸手要资源的情况，迎来了管理员劈头盖脸的责骂，甚至一记飞踢到垃圾桶，这种心情能够理解。其实，我是希望大家能够在论坛中多多交流与分享，大佬与新人之间友好讨论，但可惜，人性是贪婪的，大量新人索求帮助和资源，以及一些别有用心之人的存在，只能使论坛的管理愈加严格，并设置入场券等资源门槛，防止创作者们的作品不被滥用。所以，作为 DIY 新人，应先懂得尊重别人的劳动成果，通过不断地学习，做出一个属于自己的优秀作品，一步步 “填充” 自己的知识储备量，总比剽窃别人的东西并声称是自己的这种行为来得 “充实” 得多，要实干、多做，有想法就要自己尝试去实现，不要希望天上掉馅饼，这就是我想对 DIY 新人说的话。  
   
-※本人因为考虑到红警 DIY 圈的这种复杂环境，所以我制作了这篇针对新人的红警 DIY 介绍文章，希望能降低新手接触 DIY 的门槛。可能一些新人比较敬畏大佬，无形当中也增设了交流门槛，但我希望大家能在论坛中对大佬发布的资源或工具勇敢提出一些意见，希望新人不要因为论坛的管理方式而胆怯或放弃，你们口中的大佬，实际上也和我们一样是对 DIY 充满热情的爱好者和普通玩家，有些元老虽然离开了论坛，但有些人依旧在坚守，愿意保护曾经的创作者们留下来的心血，似乎是在捍卫着这片 “净土”，这或许也是RA2DIY论坛能够坚持下来的原因，因为他们都在用爱发电啊（
-  
+※本人因为考虑到红警 DIY 圈的这种复杂环境，所以我制作了这篇针对新人的红警 DIY 介绍文章，希望能降低新手接触 DIY 的门槛。可能一些新人比较敬畏大佬，无形当中也增设了交流门槛，但我希望大家能在论坛中对大佬发布的资源或工具勇敢提出一些意见，希望新人不要因为论坛的管理方式而胆怯或放弃，你们口中的大佬，实际上也和我们一样是对 DIY 充满热情的爱好者和普通玩家，有些元老虽然离开了论坛，但有些人依旧在坚守，愿意保护曾经的创作者们留下来的心血，似乎是在捍卫着这片 “净土”，这或许也是RA2DIY论坛能够坚持下来的原因，因为他们都在用爱发电啊（  
+
+---
 #### Tips（小窍门和提示） 
 ※ Ares 引擎增强了查错功能，你可以鼠标右键对 RunAres.bat 进行编辑，用记事本或者其他的代码查看器打开，改成以下字段：  
     
@@ -684,6 +686,27 @@ Modder 作为一个广泛性的词，不能很好地区分经验丰富的 DIY �
     SW.AllowAI=no            ;AI电脑是否拥有这个武器
     SW.AlwaysGranted=yes     ;无需建筑，直接使用（例如闪电风暴需要天气控制器这个建筑）
 	;PS：记得在超级武器注册表[SuperWeaponTypes]上注册这个超级武器
+  
+  
+  # 资源和推荐区  
+
+※扩展引擎及说明书下载：  
+ - Ares 引擎下载：[Ares下载页面](https://launchpad.net/ares/+download)（选择[目前最新版 3.0p1 ](https://launchpad.net/ares/3.0/3.0p1/+download/ares_3.0p1.zip)下载并解压至游戏目录，双击 RunAres.bat 就能用 Ares 引擎启动游戏了）
+ - Ares 使用手册中文翻译版： [Ares 3.0 中文说明书（网页版）](https://ares-china.github.io/Ares-Manual/)、[Ares 3.0 中文说明书CHM文件（文件版）](https://pan.baidu.com/s/1t3p23uVwpXn32OX_4db3MQ?pwd=3jj2)
+ - Phobos 引擎下载：[Phobos 下载页面](https://github.com/Phobos-developers/Phobos/releases)（选择 Release 稳定版或 Pre-release 预览版，将 Phobos.dll 和 Phobos.pdb 下载至游戏目录即可，建议和 Ares 一起安装）
+ - Phobos 使用手册中文翻译版：[Phobos 中文说明书（网页版）](https://phobos.readthedocs.io/zh-cn/latest/)
+   
+※其他工具：  
+ - XCC Mixer 下载：[XCC Mixer 安装程序](https://xhp.xwis.net/utilities/XCC_Utilities.exe)
+ - Tail4Windows 实时监测日志工具：[Tail4Windows 发行版下载页面](https://github.com/tualatin/tailforwindows/releases)
+ - Tail Ace 实时监测日志工具：[Tail Ace 安装程序下载](https://sourceforge.net/projects/tailace/)
+ - Ra2YuriAna 分析工具：[Ra2YuriAna 作者网盘](http://1024bit.ys168.com/)
+ - INIWeaver INI织网者：[INIWeaver 发行版下载页面](https://github.com/ra2diy/INIWeaver-1.0/releases)
+---  
+※推荐：  
+ - 更多详细教程合集：[2019 年版入门教程](https://docs.qq.com/doc/p/99db114aba903e9ab82f7546990244dc9bf60ad3)  
+ - KratosPP (奎秃斯) 扩展引擎和基础教程，观看 [艾木魁](https://space.bilibili.com/194846?spm_id_from=333.788.upinfo.head.click) 制作的红警DIY教程视频。 
+ - 地图编辑器和红警 UI 界面等高级教程：[红警教程专栏](https://www.bilibili.com/read/readlist/rl321941)   
   
 <center><font color=#FF0000><font color=#FF0000 size=6 face="Arial">DIY的初步了解 - 零基础小白也能看得懂的红警 DIY 基础介绍 V1.0</font><center>
 <strong>BY DaylilyLG<strong> 
