@@ -705,7 +705,7 @@ exit
   
 Tail4Window：※我们主要用到的功能就是实时监控日志和筛选并高亮错误信息，这样查错比较方便  
   
-我配置好了一些关键词和配置，直接导入进去即可，下载：[链接](https://pan.baidu.com/s/1KKX2Ge7lh2xvtcnwQpsHHg?pwd=1111)，打开程序进入设置（[图示](https://www.picgo.net/image/%E8%AE%BE%E7%BD%AE.boTNTM)），导入配置文件（[图示2](https://www.picgo.net/image/%E8%AE%BE%E7%BD%AE2.boTYGK)）。点击开始(Start)监控后会有延迟，开头一小部分可能会没有记录到，所以建议至少在载入页面（读条）之前打开，防止错过关键信息，或者可以重新打开 debug.log，然后再点击开始(Start)监控，这样就能重新读取之前的所有信息。点选“Filter”即可筛选出应该注意的地方。  
+我配置好了一些关键词和配置，直接导入进去即可，下载：[链接](https://pan.baidu.com/s/1KKX2Ge7lh2xvtcnwQpsHHg?pwd=1111)，打开程序进入设置（[图示](https://www.picgo.net/image/%E8%AE%BE%E7%BD%AE.boTNTM)），导入配置文件（[图示2](https://www.picgo.net/image/%E8%AE%BE%E7%BD%AE2.boTYGK)）。打开 debug.log 再点击开始(Start)监控后会有延迟，开头一小部分可能会没有记录到，所以建议至少在载入页面（读条）之前打开，防止错过关键信息，或者可以重新打开 debug.log，然后再点击开始(Start)监控，这样就能重新读取之前的所有信息。点选“Filter”即可筛选出应该注意的地方。  
 
 Tail Ace：
 ※这是备选工具，如果你的系统比较老旧，可以试试它，功能和 Tail4Window 相似，但不能导入配置，所以需要进行手动配置  
