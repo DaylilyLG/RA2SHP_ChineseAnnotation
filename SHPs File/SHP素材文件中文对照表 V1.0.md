@@ -872,12 +872,19 @@ Part 3：（位置：ra2md.mix > isourbmd.mix）
 - [红警教程专栏](https://www.bilibili.com/read/readlist/rl321941)
 ---
 #### Tips（小窍门和提示） 
-※ Ares 引擎增强了查错功能，你可以鼠标右键对 RunAres.bat 进行编辑，用记事本或者其他的代码查看器打开，改成以下字段：  
-    
-	Syringe "gamemd.exe" %*  -NOLOGO -LOG
-    exit
+※ Ares 引擎重新启用并增强了排错功能，你可以在 `RunAres.bat` 上单击鼠标右键以通过记事本或者其他文本编辑器进行编辑。建议改成以下字段：
 
-    备注：-NOLOGO(关闭EA商标的LOGO动画) -LOG(实时输出debug.log)，实时输出的 debug.log 日志文件在 debug 文件夹。
+```bash
+start Syringe "gamemd.exe" %*  -NOLOGO -LOG
+exit
+```
+
+> [!NOTE]
+> 备注：
+> - `-NOLOGO`
+>   - 启动游戏时跳过 EA 商标的 LOGO 动画的播放（`ea_wwlogo.bik`）
+> - `-LOG`
+>   - 将实时输出 `debug.log` 日志文件至 `.\debug` 目录的功能设为默认开启。
 	
 同时，推荐使用 [Tail4Window](https://github.com/tualatin/tailforwindows/releases) 或 [Tail Ace](https://sourceforge.net/projects/tailace/) 实现对 debug.log 文件的实时监控，查错更方便！  
   
