@@ -766,101 +766,105 @@ Part 3：（位置：ra2md.mix > isourbmd.mix）
 - [Ares 的默认鼠标指针文件](https://ares-developers.github.io/Ares-docs/_downloads/MouseCursors.txt)
 
 ##### 中文补充版`MouseCursors.txt`（按帧数Frame重新排列）
-    [MouseCursors] ;Ares鼠标指针注册表
-    Default=0,1,0,1,1,Left,Top                    ;正常鼠标指针
-    MoveN=2,1,0,-1,-1,Center,Top                  ;移动视角上
-    MoveNE=3,1,0,-1,-1,Right,Top                  ;移动视角右上
-    MoveE=4,1,0,-1,-1,Right,Middle                ;移动视角右
-    MoveSE=5,1,0,-1,-1,Right,Bottom               ;移动视角右下
-    MoveS=6,1,0,-1,-1,Center,Bottom               ;移动视角下
-    MoveSW=7,1,0,-1,-1,Left,Bottom                ;移动视角左下
-    MoveW=8,1,0,-1,-1,Left,Middle                 ;移动视角左
-    MoveNW=9,1,0,-1,-1,Left,Top                   ;移动视角左上
-    NoMoveN=10,1,0,-1,-1,Center,Top               ;无法移动视角上
-    NoMoveNE=11,1,0,-1,-1,Right,Top               ;无法移动视角右上
-    NoMoveE=12,1,0,-1,-1,Right,Middle             ;无法移动视角右
-    NoMoveSE=13,1,0,-1,-1,Right,Bottom            ;无法移动视角右下
-    NoMoveS=14,1,0,-1,-1,Center,Bottom            ;无法移动视角下
-    NoMoveSW=15,1,0,-1,-1,Left,Bottom             ;无法移动视角左下
-    NoMoveW=16,1,0,-1,-1,Left,Middle              ;无法移动视角左
-    NoMoveNW=17,1,0,-1,-1,Left,Top                ;无法移动视角左上
-    Select=18,13,4,-1,-1,Center,Middle            ;选取
-    Move=31,10,4,42,10,Center,Middle              ;移动
-    NoMove=41,1,0,52,1,Center,Middle              ;无法移动
-    Attack=53,5,4,63,5,Center,Middle              ;在攻击范围内选择攻击目标
-    AttackOutOfRange=58,5,4,63,5,Center,Middle    ;在攻击范围外选择攻击目标
-    Protect=68,5,4,73,5,Center,Middle             ;保护(好像注册表漏了这个...)
-    DesolatorDeploy=78,10,4,-1,10,Center,Middle   ;辐射工兵展开(原版未使用光标)
-    NoTargrt=88,1,0,-1,-1,Center,Middle           ;无目标(原版未使用光标)
-    Enter=89,10,4,100,10,Center,Middle            ;进入
-    TakeVehicle=89,10,4,100,10,Center,Middle      ;劫持车辆（Ares 添加注册
-    Sabotage=89,10,4,100,10,Center,Middle         ;破坏（Ares 添加注册
-    NoEnter=99,1,0,63,1,Center,Middle             ;无法进入
-    Deploy=110,9,4,-1,-1,Center,Middle            ;展开
-    NoDeploy=119,1,0,-1,-1,Center,Middle          ;无法展开
-    UnDeploy=120,9,4,-1,-1,Center,Middle          ;收起(原版未使用光标)
-    Sell=129,10,4,-1,-1,Center,Middle             ;变卖建筑
-    SellUnit=139,10,4,-1,-1,Center,Middle         ;变卖单位(原版未使用光标)
-    NoSell=149,1,0,-1,-1,Center,Middle            ;无法变卖建筑
-    Repair=150,20,4,-1,-1,Center,Middle           ;工程师维修建筑
-    UnitRepair=150,20,4,-1,-1,Center,Middle       ;单位维修（Ares 添加注册
-    RepairTrench=150,20,4,-1,-1,Center,Middle     ;维修战壕（Ares 添加注册
-    EngineerRepair=170,20,4,-1,-1,Center,Middle   ;维修小扳手
-    NoRepair=190,1,0,-1,-1,Center,Middle          ;无法维修
-    Target=191,8,4,-1,-1,Center,Middle            ;目标(原版未使用光标)
-    Disguise=199,5,0,-1,-1,Center,Middle          ;伪装(原版未使用光标)
-    IvanBomb=204,5,4,-1,-1,Center,Middle          ;疯狂伊文炸弹
-    MindControl=209,5,0,-1,-1,Center,Middle       ;心灵控制/干预(原版未使用光标)
-    RemoveSquid=214,5,0,-1,-1,Center,Middle       ;移除乌贼(原版未使用光标)
-    Crush=219,5,0,-1,-1,Center,Middle             ;碾压(原版未使用光标)
-    SpyTech=224,5,0,-1,-1,Center,Middle           ;间谍渗透建筑(原版未使用光标)
-    SpyPower=229,5,0,-1,-1,Center,Middle          ;间谍渗透电厂(原版未使用光标)
-    Target2=234,5,4,-1,-1,Center,Middle           ;目标2(原版未使用光标)
-    GIDeploy=239,10,0,-1,-1,Center,Middle         ;美国大兵部署(原版未使用光标)
-    Ion=249,10,4,516,1,Center,Middle              ;离子炮(原版未使用光标)
-    Paradrop=259,10,4,516,-1,Center,Middle        ;空降部队
-    Flag=269,10,4,-1,-1,Center,Middle             ;设置路径点(原版未使用光标)
-    LightningStorm=279,20,4,514,1,Center,Middle   ;闪电风暴
-    Detonate=299,10,4,-1,-1,Center,Middle         ;引爆
-    EngineerDamage=299,10,4,-1,-1,Center,Middle   ;工程师破坏（Ares 添加注册
-    Demolish=309,10,4,-1,-1,Center,Middle         ;C4爆破
-    Nuke=319,10,4,513,1,Center,Middle             ;核弹
-    Tote=329,10,4,-1,-1,Center,Middle             ;蓝色搬运光标（Ares 添加注册
-    TogglePower=339,6,0,-1,-1,Center,Middle       ;切换电源（Ares 添加注册
-    NoTote=345,1,0,52,1,Center,Middle             ;蓝色无法搬运光标(原版未使用光标)
-    IronCurtain=346,5,4,-1,-1,Center,Middle       ;铁幕
-    Heal=351,5,4,-1,-1,Center,Middle              ;治疗(原版未使用光标)
-    InfantryHeal=355,1,0,-1,-1,Center,Middle      ;部队治疗（Ares 添加注册
-    ReTarget=356,1,0,-1,-1,Center,Middle          ;重设目标(原版未使用光标)
-    Chronosphere=357,12,4,-1,-1,Center,Middle     ;超时空传送
-    Disarm=369,15,0,-1,-1,Center,Middle           ;工程师拆除炸弹
-    NoTogglePower=384,1,0,-1,-1,Center,Middle     ;无法切换电源（Ares 添加注册
-    Scroll=385,1,0,-1,-1,Center,Middle            ;右键移动视角
-    ScrollESW=386,1,0,-1,-1,Center,Middle         ;右键移动视角上方尽头
-    ScrollSW=387,1,0,-1,-1,Center,Middle          ;右键移动视角右上方尽头
-    ScrollNSW=388,1,0,-1,-1,Center,Middle         ;右键移动视角右方尽头
-    ScrollNW=389,1,0,-1,-1,Center,Middle          ;右键移动视角右下方尽头
-    ScrollNEW=390,1,0,-1,-1,Center,Middle         ;右键移动视角下方尽头
-    ScrollNE=391,1,0,-1,-1,Center,Middle          ;右键移动视角左下方尽头
-    ScrollNES=392,1,0,-1,-1,Center,Middle         ;右键移动视角左方尽头
-    ScrollES=393,1,0,-1,-1,Center,Middle          ;右键移动视角左上方尽头
-    Protect2=394,10,4,-1,-1,Center,Middle         ;保护2(注册表没这个...补一下)
-    AttackMove=404,9,4,63,5,Center,Middle         ;移动攻击
-    Deploy2=413,9,4,-1,-1,Center,Middle           ;展开2(原版未使用光标)
-    InfantryAbsorb=422,9,4,-1,-1,Center,Middle    ;步兵吸收(原版未使用光标)
-    NoMindControl=431,1,0,-1,-1,Center,Middle     ;无法心灵控制/干预(原版未使用光标)
-    NoFlag=432,1,0,-1,-1,Center,Middle            ;无法设置路径点(原版未使用光标)
-    MiniProtect=433,1,0,-1,-1,Center,Middle       ;迷你护盾/保护(原版未使用光标)
-    MiniAttack=434,1,0,-1,-1,Center,Middle        ;迷你攻击(原版未使用光标)
-    Beacon=435,15,4,-1,-1,Center,Middle           ;信标
+```ini
+[MouseCursors] ;Ares鼠标指针注册表
+Default=0,1,0,1,1,Left,Top                    ;正常鼠标指针
+MoveN=2,1,0,-1,-1,Center,Top                  ;移动视角上
+MoveNE=3,1,0,-1,-1,Right,Top                  ;移动视角右上
+MoveE=4,1,0,-1,-1,Right,Middle                ;移动视角右
+MoveSE=5,1,0,-1,-1,Right,Bottom               ;移动视角右下
+MoveS=6,1,0,-1,-1,Center,Bottom               ;移动视角下
+MoveSW=7,1,0,-1,-1,Left,Bottom                ;移动视角左下
+MoveW=8,1,0,-1,-1,Left,Middle                 ;移动视角左
+MoveNW=9,1,0,-1,-1,Left,Top                   ;移动视角左上
+NoMoveN=10,1,0,-1,-1,Center,Top               ;无法移动视角上
+NoMoveNE=11,1,0,-1,-1,Right,Top               ;无法移动视角右上
+NoMoveE=12,1,0,-1,-1,Right,Middle             ;无法移动视角右
+NoMoveSE=13,1,0,-1,-1,Right,Bottom            ;无法移动视角右下
+NoMoveS=14,1,0,-1,-1,Center,Bottom            ;无法移动视角下
+NoMoveSW=15,1,0,-1,-1,Left,Bottom             ;无法移动视角左下
+NoMoveW=16,1,0,-1,-1,Left,Middle              ;无法移动视角左
+NoMoveNW=17,1,0,-1,-1,Left,Top                ;无法移动视角左上
+Select=18,13,4,-1,-1,Center,Middle            ;选取
+Move=31,10,4,42,10,Center,Middle              ;移动
+NoMove=41,1,0,52,1,Center,Middle              ;无法移动
+Attack=53,5,4,63,5,Center,Middle              ;在攻击范围内选择攻击目标
+AttackOutOfRange=58,5,4,63,5,Center,Middle    ;在攻击范围外选择攻击目标
+Protect=68,5,4,73,5,Center,Middle             ;保护(好像注册表漏了这个...)
+DesolatorDeploy=78,10,4,-1,10,Center,Middle   ;辐射工兵展开(原版未使用光标)
+NoTargrt=88,1,0,-1,-1,Center,Middle           ;无目标(原版未使用光标)
+Enter=89,10,4,100,10,Center,Middle            ;进入
+TakeVehicle=89,10,4,100,10,Center,Middle      ;劫持车辆（Ares 添加注册
+Sabotage=89,10,4,100,10,Center,Middle         ;破坏（Ares 添加注册
+NoEnter=99,1,0,63,1,Center,Middle             ;无法进入
+Deploy=110,9,4,-1,-1,Center,Middle            ;展开
+NoDeploy=119,1,0,-1,-1,Center,Middle          ;无法展开
+UnDeploy=120,9,4,-1,-1,Center,Middle          ;收起(原版未使用光标)
+Sell=129,10,4,-1,-1,Center,Middle             ;变卖建筑
+SellUnit=139,10,4,-1,-1,Center,Middle         ;变卖单位(原版未使用光标)
+NoSell=149,1,0,-1,-1,Center,Middle            ;无法变卖建筑
+Repair=150,20,4,-1,-1,Center,Middle           ;工程师维修建筑
+UnitRepair=150,20,4,-1,-1,Center,Middle       ;单位维修（Ares 添加注册
+RepairTrench=150,20,4,-1,-1,Center,Middle     ;维修战壕（Ares 添加注册
+EngineerRepair=170,20,4,-1,-1,Center,Middle   ;维修小扳手
+NoRepair=190,1,0,-1,-1,Center,Middle          ;无法维修
+Target=191,8,4,-1,-1,Center,Middle            ;目标(原版未使用光标)
+Disguise=199,5,0,-1,-1,Center,Middle          ;伪装(原版未使用光标)
+IvanBomb=204,5,4,-1,-1,Center,Middle          ;疯狂伊文炸弹
+MindControl=209,5,0,-1,-1,Center,Middle       ;心灵控制/干预(原版未使用光标)
+RemoveSquid=214,5,0,-1,-1,Center,Middle       ;移除乌贼(原版未使用光标)
+Crush=219,5,0,-1,-1,Center,Middle             ;碾压(原版未使用光标)
+SpyTech=224,5,0,-1,-1,Center,Middle           ;间谍渗透建筑(原版未使用光标)
+SpyPower=229,5,0,-1,-1,Center,Middle          ;间谍渗透电厂(原版未使用光标)
+Target2=234,5,4,-1,-1,Center,Middle           ;目标2(原版未使用光标)
+GIDeploy=239,10,0,-1,-1,Center,Middle         ;美国大兵部署(原版未使用光标)
+Ion=249,10,4,516,1,Center,Middle              ;离子炮(原版未使用光标)
+Paradrop=259,10,4,516,-1,Center,Middle        ;空降部队
+Flag=269,10,4,-1,-1,Center,Middle             ;设置路径点(原版未使用光标)
+LightningStorm=279,20,4,514,1,Center,Middle   ;闪电风暴
+Detonate=299,10,4,-1,-1,Center,Middle         ;引爆
+EngineerDamage=299,10,4,-1,-1,Center,Middle   ;工程师破坏（Ares 添加注册
+Demolish=309,10,4,-1,-1,Center,Middle         ;C4爆破
+Nuke=319,10,4,513,1,Center,Middle             ;核弹
+Tote=329,10,4,-1,-1,Center,Middle             ;蓝色搬运光标（Ares 添加注册
+TogglePower=339,6,0,-1,-1,Center,Middle       ;切换电源（Ares 添加注册
+NoTote=345,1,0,52,1,Center,Middle             ;蓝色无法搬运光标(原版未使用光标)
+IronCurtain=346,5,4,-1,-1,Center,Middle       ;铁幕
+Heal=351,5,4,-1,-1,Center,Middle              ;治疗(原版未使用光标)
+InfantryHeal=355,1,0,-1,-1,Center,Middle      ;部队治疗（Ares 添加注册
+ReTarget=356,1,0,-1,-1,Center,Middle          ;重设目标(原版未使用光标)
+Chronosphere=357,12,4,-1,-1,Center,Middle     ;超时空传送
+Disarm=369,15,0,-1,-1,Center,Middle           ;工程师拆除炸弹
+NoTogglePower=384,1,0,-1,-1,Center,Middle     ;无法切换电源（Ares 添加注册
+Scroll=385,1,0,-1,-1,Center,Middle            ;右键移动视角
+ScrollESW=386,1,0,-1,-1,Center,Middle         ;右键移动视角上方尽头
+ScrollSW=387,1,0,-1,-1,Center,Middle          ;右键移动视角右上方尽头
+ScrollNSW=388,1,0,-1,-1,Center,Middle         ;右键移动视角右方尽头
+ScrollNW=389,1,0,-1,-1,Center,Middle          ;右键移动视角右下方尽头
+ScrollNEW=390,1,0,-1,-1,Center,Middle         ;右键移动视角下方尽头
+ScrollNE=391,1,0,-1,-1,Center,Middle          ;右键移动视角左下方尽头
+ScrollNES=392,1,0,-1,-1,Center,Middle         ;右键移动视角左方尽头
+ScrollES=393,1,0,-1,-1,Center,Middle          ;右键移动视角左上方尽头
+Protect2=394,10,4,-1,-1,Center,Middle         ;保护2(注册表没这个...补一下)
+AttackMove=404,9,4,63,5,Center,Middle         ;移动攻击
+Deploy2=413,9,4,-1,-1,Center,Middle           ;展开2(原版未使用光标)
+InfantryAbsorb=422,9,4,-1,-1,Center,Middle    ;步兵吸收(原版未使用光标)
+NoMindControl=431,1,0,-1,-1,Center,Middle     ;无法心灵控制/干预(原版未使用光标)
+NoFlag=432,1,0,-1,-1,Center,Middle            ;无法设置路径点(原版未使用光标)
+MiniProtect=433,1,0,-1,-1,Center,Middle       ;迷你护盾/保护(原版未使用光标)
+MiniAttack=434,1,0,-1,-1,Center,Middle        ;迷你攻击(原版未使用光标)
+Beacon=435,15,4,-1,-1,Center,Middle           ;信标
+```
 ##### 第 451 帧开始为尤里复仇版本的光标↓
-    ForceShield=450,10,4,-1,1,Center,Middle       ;力场护盾
-    NoForceShield=460,10,4,-1,-1,Center,Middle    ;无法使用力场护盾
-    GeneticMutator=470,10,4,-1,-1,Center,Middle   ;基因突变
-    AirStrike=480,8,4,-1,-1,Center,Middle         ;空袭（鲍里斯使用的空袭
-    PsychicDominator=488,8,4,516,-1,Center,Middle ;心灵控制
-    PsychicReveal=496,8,4,515,1,Center,Middle     ;心灵控制感测
-    SpyPlane=504,8,4,512,1,Center,Middle          ;侦察机
+```ini
+ForceShield=450,10,4,-1,1,Center,Middle       ;力场护盾
+NoForceShield=460,10,4,-1,-1,Center,Middle    ;无法使用力场护盾
+GeneticMutator=470,10,4,-1,-1,Center,Middle   ;基因突变
+AirStrike=480,8,4,-1,-1,Center,Middle         ;空袭（鲍里斯使用的空袭
+PsychicDominator=488,8,4,516,-1,Center,Middle ;心灵控制
+PsychicReveal=496,8,4,515,1,Center,Middle     ;心灵控制感测
+SpyPlane=504,8,4,512,1,Center,Middle          ;侦察机
+```
 
 # 推荐区
 ### 推荐B站 fhy093 大佬制作的地形文件和用户界面的修改方法
@@ -892,24 +896,24 @@ exit
   
 ※ Ares 引擎强化了测试手段，现在允许直接投放单位到地图进行测试了，下面放出模板代码，可直接复制使用：（具体实现手法可以查阅 Ares 说明书）  
   
-`单位投放其实就是超级武器的一种，由 Ares 引擎实现，所以这里我又要推荐安装一下 Ares 引擎了（啰嗦），当然还可以考虑安装其他拓展引擎，例如 Phobos（Phobos 的功能作者还在探索学习中...Phobos 与 Ares 结合使用达到最佳效果）。`
-
-    [Test] 
-    UIName=NOSTR:TEST        ;CSF 文件内对应的名称
-    IsPowered=false          ;false 表示无需供电
-    RechargeTime=-1          ;-1 表示无等待时间
-    Type=UnitDelivery        ;超级武器类型，这个不用修改
-    Cursor=Move              ;显示的鼠标指针图标
-    NoCursor=NoMove          ;不能投放时显示的鼠标指针图标
-    Range=4                  ;生效范围圆圈
-    LineMultiplier=2         ;圆圈的密度
-    Deliver.Types=AMCV,TESLA ;投放盟军基地车和磁暴线圈，可往后添加更多单位
-    Deliver.Owner=Invoker    ;投放出的单位归谁拥有
-    SW.Deferment=0           ;生效前等待的帧数
-    SW.AllowAI=no            ;AI电脑是否拥有这个武器
-    SW.AlwaysGranted=yes     ;无需建筑，直接使用（例如闪电风暴需要天气控制器这个建筑）
-	;PS：记得在超级武器注册表 [SuperWeaponTypes] 上注册这个超级武器  
-
+ - 单位投放其实就是超级武器的一种，由 Ares 引擎实现，所以这里我又要推荐安装一下 Ares 引擎了（啰嗦），当然还可以考虑安装其他拓展引擎，例如 Phobos（Phobos 的功能作者还在探索学习中...Phobos 与 Ares 结合使用达到最佳效果）。`
+```ini
+[Test] 
+UIName=NOSTR:TEST        ;CSF 文件内对应的名称
+IsPowered=false          ;false 表示无需供电
+RechargeTime=-1          ;-1 表示无等待时间
+Type=UnitDelivery        ;超级武器类型，这个不用修改
+Cursor=Move              ;显示的鼠标指针图标
+NoCursor=NoMove          ;不能投放时显示的鼠标指针图标
+Range=4                  ;生效范围圆圈
+LineMultiplier=2         ;圆圈的密度
+Deliver.Types=AMCV,TESLA ;投放盟军基地车和磁暴线圈，可往后添加更多单位
+Deliver.Owner=Invoker    ;投放出的单位归谁拥有
+SW.Deferment=0           ;生效前等待的帧数
+SW.AllowAI=no            ;AI电脑是否拥有这个武器
+SW.AlwaysGranted=yes     ;无需建筑，直接使用（例如闪电风暴需要天气控制器这个建筑）
+;PS：记得在超级武器注册表 [SuperWeaponTypes] 上注册这个超级武器  
+```
    000  
    
 ~~~
