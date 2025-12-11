@@ -7,7 +7,7 @@
   
 内容讲解可能比较冗长或者啰嗦，但是讲得很细，新手推荐按顺序阅读，我会尽量用简单的方式介绍一些本人认为常见的 DIY 内容，从基础开始（不包含*覆盖物、污染物等杂项*和一些可能比较复杂，或者会运用到扩展引擎的内容）希望能给初次接触红警 DIY 的小伙伴提供便利~（以下内容中如果有出现“※”符号，表示这段内容是作者的备注）   
   
-如果你想使用 YR 版本进行 DIY，这里推荐大家在 DIY 前预先安装 Ares 和 Phobos 引擎（下载链接和使用方法已经放在文章最底下的[资源和推荐区](# 资源)），然后使用INI修复版本：[INI修缮项目：Yrstandard-ini（这里十分感谢 ProsperousBeyond）](https://gitee.com/PB_LAB/yrstandard-ini)（安装前注意备份），安装完毕后，咱们就可以进入下面的章节了。这边要提醒一下 RA2 版本的 DIY 玩家，由于 YR 版本的官方内容和功能是最多且最新的（官方最新版为 YR 1.001），以及 YR 有更多的软件支持，例如对 YR 有针对性优化的地图编辑器，而最新版的地图编辑器已经不支持 RA2 了，所以我推荐使用 YR 进行 DIY，而不是 RA2，除非你需要 DIY 旧版引擎的内容（例如基于旧版引擎的 RA2，或使用旧版引擎的其他版本），并*接受旧版引擎的缺陷*。  
+如果你想使用 YR 版本进行 DIY，这里推荐大家在 DIY 前预先安装 Ares 和 Phobos 引擎（下载链接和使用方法已经放在文章最底下的[资源和推荐区](# 资源)），然后使用INI修复版本：[INI修缮项目：Yrstandard-ini（这里十分感谢 ProsperousBeyond）](https://gitee.com/PB_LAB/yrstandard-ini)（安装前注意备份），安装完毕后，咱们就可以进入下面的章节了。这边要提醒一下 RA2 版本的 DIY 玩家，由于 YR 版本的官方内容和功能是最多且最新的（官方最新版为 YR 1.001），以及 YR 有更多的软件支持，例如对 YR 有针对性优化的地图编辑器，而最新版的地图编辑器已经不支持 RA2 了，所以我推荐使用 YR 进行 DIY，而不是 RA2，除非你需要 DIY 旧版引擎的内容（例如基于旧版引擎的 RA2，或使用旧版引擎的其他游戏版本），并*接受旧版引擎的缺陷*。  
 
 # 第一章：rules(md).ini（规则配置文件）
   
@@ -41,7 +41,7 @@ Name=       语句/标签/代码
 ~~~ini
 [AEGIS]
 ......省略一大段......  
-;BuildLimit=2  ←这是保留的注释，取消注释前要注意不能有重复的语句！绝对不能重复语句！不能！（  
+;BuildLimit=2  ←这是保留的注释，取消注释前要注意不能有重复的语句！绝对！不能！有重复语句！（  
 BuildLimit=数字  ←另起一行，可以填写阿拉伯数字，例如谭雅的建造数量限制为一个，填 1 即可。  
 ElitePrimary=MedusaE  ; ←像这样把注释放到后面也是可以的哦~
 Size=30  ; ←注意是英文的 “;”、而不是中文的 “；”！  
@@ -157,7 +157,7 @@ ProneDamage=100%
 你很容易就发现了`AEGIS`（  
 你可能会困惑，为啥 AEGIS 会在这里？好的，这里就是关键点，我们要请出一个专有名词：**注册表**，这就类似“登记表”，如果一个完整的犀牛坦克要在游戏里出现，就必须在登记表里登记名字！（而且名字不能重复）**注册**也是同理，如果你有新东西要添加，那就必须要找到对应的**注册表**进行**注册**，很好理解对不对？可以看到神盾巡洋舰（AEGIS）被“登记”在了这个注册表：`[VehicleTypes]`，这就说明它已经使用 AEGIS 这个注册名进行注册了，那么 AEGIS 就是它的注册名，这就是**注册名**的由来，它是单位*独一无二*的标识~  
   
-上面提到了必须在对应注册表进行注册，所以`[VehicleTypes]`注册表只是其中的一部分哦！下面还有许多常用的注册表给大家展示一下：  
+`[VehicleTypes]`注册表只是其中的一部分哦！上面提到了必须在对应注册表进行注册，那么下面还有许多常用的注册表给大家展示一下：  
     
 常用注册表：  
 ※这里已经把准备讲解的注册表都列出来了，具体讲解内容还没完成...大部分先留空  
@@ -178,7 +178,7 @@ ProneDamage=100%
   
 [Warheads]  ;注册弹头  
   
-[WeaponTypes]  ;Ares引擎的注册表，选择性了解  
+[WeaponTypes]  ;Ares引擎的注册表，但建议了解的内容，介绍什么是挂载，什么情况下需要挂载武器
   
 ※超级武器  ;有Ares引擎内容，选择性了解  
   
@@ -188,8 +188,71 @@ ProneDamage=100%
   
 ※粒子系统  
   
-[Particles]  ;注册粒子
-[ParticleSystems]  ;注册粒子系统
+[ParticleSystems]  ;注册粒子系统   
+[Particles]  ;注册粒子  
+ 
+
+
+※粒子系统准备讲解的部分：
+```ini
+;在武器本体中，首先加入这个语句：
+AttachedParticleSystem=;在粒子系统注册表中选择粒子系统
+
+;然后使用以下三种任意语句即视为开启，在表现方式上无区别，由粒子系统自身定义
+IsRailgun=yes;地形高低差可能会导致粒子被截断...可安装 Phobos 修复
+UseFireParticles=yes
+UseSparkParticles=yes
+
+;※推荐使用的 Ares 内容：
+;Ares 引擎中有提供代替语句，例如可将 IsRailgun= 改用 IsDetachedRailgun=，解决第一发攻击产生的粒子动画未消散前，就无法发射第二发的硬编码问题。
+```
+※案例：这个是喷火武器，这是遗留在规则文件中的废案，举例：共和国之辉 MOD 将喷火粒子系统重新利用在了喷火碉堡上
+```ini
+[FireballLauncher];武器本体
+Damage=0
+AmbientDamage=2;穿透伤害，必须先开启粒子系统
+ROF=50
+Range=4.25
+Projectile=Invisible
+Speed=1
+Warhead=Fire
+Report=FLAMTNK1
+UseFireParticles=yes;开启
+AttachedParticleSystem=FireStreamSys;要启用的粒子系统
+Burst=2
+
+[FireStreamSys];粒子系统
+HoldsWhat=FireStream;粒子
+Spawns=yes
+SpawnFrames=4
+BehavesLike=Fire;类型：Gas丨Smoke丨Fire丨Spark丨Railgun
+Image=TWLT036
+Lifetime=30
+
+[FireStream];粒子
+Image=WCCLOUD1;每个粒子显示的图像
+Deacc=0.01
+Velocity=28.0
+BehavesLike=Fire;类型，同上，两类型允许不相同
+MaxEC=500
+MaxDC=3
+Warhead=Fire;这里还可以挂弹头
+Damage=2;粒子伤害，不需要也可以删掉
+StartStateAI=1
+EndStateAI=19
+StateAIAdvance=6
+Translucent50State=15
+Translucent25State=10
+DeleteOnStateLimit=yes
+Normalized=yes
+FinalDamageState=14
+Report=FLAMTNK1
+```
+
+
+
+
+
   
 （待完善） 
 
@@ -586,7 +649,9 @@ E.武器可以给不同的单位交替使用
 ## 其他零碎知识
   
 其他零碎知识：由于考虑到新人获取参考资料的难度，以后我会贡献出目前正在制作的地图，里面有一些比较有参考意义的代码，都会作为给新人讲解的材料，目前咱们只需粗略了解一下地图文件和地图编辑器就好... 
-
+  
+  ※RGB&HSB：规则文件中[Colors]标签下方的数据看似R, G, B，但并非真的RGB格式，而是HSV格式：H(色调), S(饱和度), V(值)，需要使用[格式转换器(WWColorUtil)](https://ppmforums.com/download.php?id=63591&sid=55f42dd396e772a9aac559c34f3916fc)进行转换，例如将 LightGold=25,255,255 的 25,255,255 依次放入 H, S, V 即可算出RGB为：(255, 149, 0)，橙色。  
+  
 # 完事儿了
   
 ※如果你能完整看完这整篇 DIY 介绍，相信你是一位对红警 DIY 充满热情的新人~  
