@@ -637,7 +637,7 @@ E.武器可以给不同的单位交替使用
 ※特别提醒，需要改动地图时，最好手动备份一下地图文件。不应出现修改地图文件代码的同时，又打开地编对其进行修改的情况。  
 ※RA2 原版DIY玩家则需使用旧版的地编，里面的许多内容是相似的，所以不用担心。这里推荐使用 FA2SP，这应该是最后一个支持 RA2 原版的地编，下载：[FA2SP 1.6.2 安装包](https://pan.baidu.com/s/1u_zecwvom5cL9mt91qSDSw?pwd=RA2M) 。	  
 	
-  ※这里准备介绍韩大妈的 [HDM Edition](https://github.com/handama/FA2sp/releases)  
+  ※这里准备介绍韩大猫（Handama）的 [HDM Edition](https://github.com/handama/FA2sp/releases)  
 （以下简称HDM）  
   
   ※这里准备介绍Rampastring的 [WorldAlteringEditor](https://github.com/CnCNet/WorldAlteringEditor/releases)  
@@ -756,13 +756,19 @@ Modder 作为一个广泛性的词，不能很好地区分经验丰富的 DIY �
 
 ---
 #### Tips（小窍门和提示） 
-1. Ares 引擎增强了查错功能，你可以鼠标右键对 RunAres.bat 进行编辑，用记事本或者其他的代码查看器打开，改成以下字段：  
-```    
-Syringe "gamemd.exe" %*  -NOLOGO -LOG
+1. Ares 引擎重新启用并增强了排错功能，你可以在 `RunAres.bat` 上单击鼠标右键以通过记事本或者其他文本编辑器进行编辑。建议改成以下字段：
+
+```bash
+start Syringe "gamemd.exe" %*  -NOLOGO -LOG
 exit
 ```
-备注：-NOLOGO(关闭EA商标的LOGO动画) -LOG(实时输出debug.log)，实时输出的 debug.log 日志文件在 debug 文件夹。
-  
+
+> [!NOTE]
+> 备注：
+> - `-NOLOGO`
+>   - 启动游戏时跳过 EA 商标的 LOGO 动画的播放（`ea_wwlogo.bik`）
+> - `-LOG`
+>   - 将实时输出 `debug.log` 日志文件至 `.\debug` 目录的功能设为默认开启。
   
 2. Tail4Window 和 Tail Ace 工具：  
 
@@ -774,28 +780,30 @@ Tail4Window：※我们主要用到的功能就是实时监控日志和筛选并
 
 Tail Ace：※这是备选工具，如果你的系统比较老旧，可以试试它，功能和 Tail4Window 相似，但不能导入配置，所以需要进行手动配置  
   
-在设置里先填入[图示](https://www.picgo.net/image/%E8%AE%BE%E7%BD%AET.bo7OOL)中的数值，比如在缓冲区大小填写`2147483647`(这是最大上限)，这样几乎能无限记录数据，`0.1`表示每一毫秒刷新一次(0.1是最大下限)，`50`表示保留五十个日志历史记录(可忽略)，再下面是选择日志文件的路径(可选)，还有是否开启预先读取部分日志内容的选项(可选)。然后配置关键词时可以参考 [Tail4Window 中设置的关键词(图示)](https://www.picgo.net/image/%E8%AE%BE%E7%BD%AET2.bo7gmO)(需打开日志文件后再配置关键词)，还可以设置字体和调整字体大小，如果还有其他用得上的功能，大家可以试着摸索一下~  
+在设置里先填入[图示](https://www.picgo.net/image/%E8%AE%BE%E7%BD%AET.bo7OOL)中的数值，比如在缓冲区大小填写`2147483647`(这是最大上限)，这样几乎能无限记录数据，`0.1`表示每一毫秒刷新一次(0.1是最大下限)，`50`表示保留五十个日志历史记录(可忽略)，再下面是选择日志文件的路径(可选)，还有是否开启预先读取部分日志内容的选项(可选)。然后配置关键词时可以参考 [Tail4Window 中设置的关键词(图示)](https://www.picgo.net/image/%E8%AE%BE%E7%BD%AET2.bo7gmO)(需打开日志文件后再配置关键词)，可自由设置和调整字体大小，如果还有其他用得上的功能，大家可以试着摸索一下~  
   
   
 3. Ares 引擎强化了测试手段，现在允许直接投放单位到地图进行测试了，下面放出模板代码，可直接复制使用：（具体实现手法可以查阅 Ares 说明书）  
   
 *单位投放其实就是超级武器的一种，由 Ares 引擎实现。*
 
-    [Test] 
-    UIName=NOSTR:TEST        ;CSF 文件内对应的名称
-    IsPowered=false          ;false 表示无需供电
-    RechargeTime=-1          ;-1 表示无等待时间
-    Type=UnitDelivery        ;超级武器类型，这个不用修改
-    Cursor=Move              ;显示的鼠标指针图标
-    NoCursor=NoMove          ;不能投放时显示的鼠标指针图标
-    Range=4                  ;生效范围圆圈
-    LineMultiplier=2         ;圆圈的密度
-    Deliver.Types=AMCV,TESLA ;投放盟军基地车和磁暴线圈，可往后添加更多单位
-    Deliver.Owner=Invoker    ;投放出的单位归谁拥有
-    SW.Deferment=0           ;生效前等待的帧数
-    SW.AllowAI=no            ;AI电脑是否拥有这个武器
-    SW.AlwaysGranted=yes     ;无需建筑，直接使用（例如闪电风暴需要天气控制器这个建筑）
-	;PS：记得在超级武器注册表[SuperWeaponTypes]上注册这个超级武器
+```ini
+[Test] 
+UIName=NOSTR:TEST        ;CSF 文件内对应的名称
+IsPowered=false          ;false 表示无需供电
+RechargeTime=-1          ;-1 表示无等待时间
+Type=UnitDelivery        ;超级武器类型，这个不用修改
+Cursor=Move              ;显示的鼠标指针图标
+NoCursor=NoMove          ;不能投放时显示的鼠标指针图标
+Range=4                  ;生效范围圆圈
+LineMultiplier=2         ;圆圈的密度
+Deliver.Types=AMCV,TESLA ;投放盟军基地车和磁暴线圈，可往后添加更多单位
+Deliver.Owner=Invoker    ;投放出的单位归谁拥有
+SW.Deferment=0           ;生效前等待的帧数
+SW.AllowAI=no            ;AI电脑是否拥有这个武器
+SW.AlwaysGranted=yes     ;无需建筑，直接使用（例如闪电风暴需要天气控制器这个建筑）
+;PS：记得在超级武器注册表 [SuperWeaponTypes] 上注册这个超级武器  
+```
   
   
   # 资源和推荐区  
