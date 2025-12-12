@@ -214,7 +214,7 @@
     sqdg_se      乌贼攻击动画东南（游戏未使用素材
     sqdg_sw      乌贼攻击动画西南（游戏未使用素材
     sqdg_w       乌贼攻击动画西（游戏未使用素材
-    ucflash      驻军建筑开火（由 OccupantAnim= 控制，通用素材
+    ucflash      驻军建筑开火（美国大兵驻军建筑开火动画，由 OccupantAnim= 控制，通用素材
     vtmuzzle     坦克三星开火（通用素材
     yuricntl     尤里攻击动画（尤里控制敌人的时候，尤里头顶会有一个逐渐变大的圆圈，控制环
  
@@ -601,8 +601,8 @@ Squad=0,<none>,no              ; 随机步兵小队【无效】（好像会强�
 	cdgas        神经突击车的神经毒气（AnimList=CDGAS，弹头动画很少就不单独分类了）
 	diskray      磁悬幽浮吸取电厂、矿场产生的吸取环（DrainAnimationType=
 	forcshld     力场护盾效果（ForceShieldInvokeAnim=
-	gunfires     开火（未使用素材
-	gunfirey     开火（未使用素材，而且图像错位了...
+	gunfires     驻军建筑开火（未使用素材，和动员兵的驻军开火动画是一样的，但必须选单位unit色盘
+	gunfirey     驻军建筑开火（未使用素材，而且图像错位了...
 	mindanim     被心灵控制塔等控制的单位头顶特效（ControlledAnimationType=
 	mindanimr    被超级武器控制的单位头顶特效：心灵控制器（PermaControlledAnimationType=
 	mutate       被废弃的建造栏图标（基因突变（英文
@@ -612,8 +612,8 @@ Squad=0,<none>,no              ; 随机步兵小队【无效】（好像会强�
 	txgasg       绿色病毒气体（病毒狙击手击杀步兵后产生的毒气
 	txgasr       红色病毒气体（未使用素材，可能是神经毒气的废案
 	ucall3       驻军建筑开火（未使用素材，三个驻军开火动画的拼接
-	uccons       驻军建筑开火
-	ucinit       尤里新兵的驻军开火动画
+	uccons       驻军建筑开火（动员兵的驻军开火动画，由 OccupantAnim= 控制，通用素材
+	ucinit       驻军建筑开火（尤里新兵的驻军开火动画，由 OccupantAnim= 控制，通用素材
 	
 #### 2、单位：（尤里复仇
     arnd         魔鬼终结者
