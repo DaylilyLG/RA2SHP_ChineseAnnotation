@@ -110,7 +110,7 @@
     pmatkmove    攻击（泰伯利亚   
     pmgrdarea    保护（泰伯利亚  
     pod          空降仓，左右视图（泰伯利亚
-    podring      空降仓使用的落地动画40帧（未使用素材
+    podring      空降仓使用的落地动画40帧（泰伯利亚
     progbar      项目条？
     progbar2     项目条2？
     progbarm     项目栏？
@@ -308,28 +308,28 @@
   
 - 格式例：箱子类型=生成概率,图像,能否在水上出现,参数（“生成概率” 的总和一般不超过 110，必须不小于 100）  
 ```ini	
-Armor=10,ARMOR,yes,1.5    ; 附近5x5范围单位的护甲增加>参数：护甲乘数 x1.5  
-Firepower=10,FIREPOWR,yes,2.0 ; 附近5x5范围单位的火力增加>参数：火力乘数 x2.0  
-HealBase=10,HEALALL,yes      ; 所有已方单位立即满血（指全图已方单位立即满血，且效果不受范围限制）  
-Money=20,MONEY,yes,2000   ; 立即获得一笔钱>参数：一次获得2000现金（单人战役控制SoloCrateMoney=  
-Reveal=10,REVEAL,yes       ; 显示整个雷达地图  
-Speed=10,SPEED,yes,1.2    ; 附近5x5范围单位的速度增加>参数：速度乘数 x1.2  
-Veteran=20,VETERAN,yes,1    ; 单位升级>参数：一次升1级  
-Unit=20,<none>,no        ; 获得车辆（不能设置动画，已有50个单位或箱子在水上/沙滩上将会转为现金，当遭遇战中玩家目前资金不足1500，同时没有基地车或任何一个建筑，那么箱子会强制生成基地车）  
+Armor=10,ARMOR,yes,1.5         ; 附近5x5范围单位的护甲增加>参数：护甲乘数 x1.5  
+Firepower=10,FIREPOWR,yes,2.0  ; 附近5x5范围单位的火力增加>参数：火力乘数 x2.0  
+HealBase=10,HEALALL,yes        ; 所有已方单位立即满血（指全图已方单位立即满血，且效果不受范围限制）  
+Money=20,MONEY,yes,2000        ; 立即获得一笔钱>参数：一次获得2000现金（单人战役控制SoloCrateMoney=  
+Reveal=10,REVEAL,yes           ; 显示整个雷达地图  
+Speed=10,SPEED,yes,1.2         ; 附近5x5范围单位的速度增加>参数：速度乘数 x1.2  
+Veteran=20,VETERAN,yes,1       ; 单位升级>参数：一次升1级  
+Unit=20,<none>,no              ; 获得车辆（不能设置动画，已有50个单位或箱子在水上/沙滩上将会转为现金，当遭遇战中玩家目前资金不足1500，同时没有基地车或任何一个建筑，那么箱子会强制生成基地车）  
 			   
 ;以下是原版游戏中未使用的箱子，修改概率可重新利用（注意概率总和 100 ≤ x ≤ 110）  
 	
-Invulnerability=0,ARMOR,yes,1.0     ; 无敌>参数：持续1分钟【无效】（图标是装甲箱，可删掉图标当空箱子用...红警1的遗留）  
-IonStorm=0,<none>,yes        ; 引起离子风暴【无效】  
-Gas=0,<none>,yes,100    ; 泰伯利亚气体（毒气）>参数：每团气体云造成100伤害【参数无效】（默认图像 wccloud1）  
-Tiberium=0,<none>,no         ; 泰伯利亚矿（金矿），拾取后生成金矿并在原地蔓延  
-Pod=0,<none>,no         ; 获得一次DropPod【无效】（泰伯利亚遗留空降仓功能  
-Cloak=0,CLOAK,yes         ; 附近5x5范围单位获得隐形  
-Darkness=0,SHROUDX,yes       ; 关闭全图（间谍渗透雷达效果  
-Explosion=0,<none>,yes,500    ; 大爆炸>参数：每次爆炸产生500的伤害  
-ICBM=0,CHEMISLE,yes      ; 获得一次核弹发射权  
-Napalm=0,<none>,no,600     ; 火焰杀伤（大爆炸）>参数：每次爆炸产生600的伤害（似乎无法对建筑造成伤害）  
-Squad=0,<none>,no         ; 随机步兵小队【无效】（好像会强制换成钱？  
+Invulnerability=0,ARMOR,yes,1.0; 无敌>参数：持续1分钟【无效】（图标是装甲箱，可删掉图标当空箱子用...红警1的遗留）  
+IonStorm=0,<none>,yes          ; 引起离子风暴【无效】  
+Gas=0,<none>,yes,100           ; 泰伯利亚气体（毒气）>参数：每团气体云造成100伤害【参数无效】（默认图像 wccloud1）  
+Tiberium=0,<none>,no           ; 泰伯利亚矿（金矿），拾取后生成金矿并在原地蔓延  
+Pod=0,<none>,no                ; 获得一次DropPod【无效】（泰伯利亚遗留空降仓功能  
+Cloak=0,CLOAK,yes              ; 附近5x5范围单位获得隐形  
+Darkness=0,SHROUDX,yes         ; 关闭全图（间谍渗透雷达效果  
+Explosion=0,<none>,yes,500     ; 大爆炸>参数：每次爆炸产生500的伤害  
+ICBM=0,CHEMISLE,yes            ; 获得一次核弹发射权  
+Napalm=0,<none>,no,600         ; 火焰杀伤（大爆炸）>参数：每次爆炸产生600的伤害（似乎无法对建筑造成伤害）  
+Squad=0,<none>,no              ; 随机步兵小队【无效】（好像会强制换成钱？  
 ```
 #### 7、超级武器效果：
     chronoar     超时空传送-选择（在原地显示的传送准备动画）
