@@ -103,28 +103,8 @@ ProneDamage=100%
 **全局语句**（或全局标签）在规则文件中一般是指`[General]`标签下方的所有语句代码，可以理解为*独立存在的代码*，例如控制单位的维修速度、各个阵营的步兵类型（例如盟军玩家建造的建筑被摧毁时逃出来的就是美国大兵）、幻影坦克可以伪装的物体、间谍可以偷多少比例的钱等等，你甚至可以让“维修小扳手”自动维修建筑，而无需手动操作。这部分有兴趣可以查阅词典，新手只需粗略了解即可。  
   
 现在我们来具体了解一下什么是**单位**，单位的类型有很多，例如：车辆、步兵、建筑、海军，还有空军等等都可以被称作**单位**。其中，车辆、直升机、飞艇、飞碟及海军被分类为***载具*** ← 重点，具体分类在下面介绍。  
-  我们先来了解一下单位的基本运动方式：  
   
-  
-※运动方式（这部分还没弄好...）  
-  Locomotor=运动模式  
-  MovementZone=寻路方式  
-  额外：  
-  SpeedType=速度类型  
-  配合`Locomotor=` `MovementZone=`  
-  常见速度类型：  
-  不常见速度类型：（选择性了解）  
-  
-  部分其他特殊运动模式：（选择性了解）  
-  当配合额外语句`Teleporter=yes`时，单位运动模式会进行切换（例如超时空矿车传送回矿场再开回矿区）。  
-  当配合额外语句`IsLocomotor=yes`时，`Locomotor=`一般要设置为`{92612C46-F71F-11d1-AC9F-006008055BB5}`（例如磁电坦克把单位举高高）  
-（待完善）  
-  
-两栖   
-  
-
-  
-※注册表及注册内容  
+首先，我们先来了解什么是*注册表*:
   
 上面有提到过注册名，例如`[AEGIS]`是神盾巡洋舰的**注册名**，
 你可能会有疑问，为啥叫**注册名**？它是咋来的？现在来搜索这个`[VehicleTypes]`，你会看到：  
@@ -157,7 +137,7 @@ ProneDamage=100%
 你很容易就发现了`AEGIS`（  
 你可能会困惑，为啥 AEGIS 会在这里？好的，这里就是关键点，我们要请出一个专有名词：**注册表**，这就类似“登记表”，如果一个完整的犀牛坦克要在游戏里出现，就必须在登记表里登记名字！（而且名字不能重复）**注册**也是同理，如果你有新东西要添加，那就必须要找到对应的**注册表**进行**注册**，很好理解对不对？可以看到神盾巡洋舰（AEGIS）被“登记”在了这个注册表：`[VehicleTypes]`，这就说明它已经使用 AEGIS 这个注册名进行注册了，那么 AEGIS 就是它的注册名，这就是**注册名**的由来，它是单位*独一无二*的标识~  
   
-`[VehicleTypes]`注册表只是其中的一部分哦！上面提到了必须在对应注册表进行注册，那么下面还有许多常用的注册表给大家展示一下：  
+`[VehicleTypes]`注册表只是其中的一部分哦！那么下面还有常用的注册表给大家展示一下：  
     
 常用注册表：  
 ※这里已经把准备讲解的注册表都列出来了，具体讲解内容还没完成...大部分先留空  
@@ -186,34 +166,46 @@ ProneDamage=100%
   
 [SuperWeaponTypes]
   
-※粒子系统  
-  
-[ParticleSystems]  ;注册粒子系统   
-[Particles]  ;注册粒子  
+ 
  
 
 
 ※粒子系统准备讲解的部分：
+  
+注册新的粒子系统一般要用到两个注册表：  
+```ini
+[ParticleSystems]  ;注册粒子系统   
+[Particles]  ;注册粒子（注册后用在粒子系统） 
+```
+对于新手来说或许不能很好地理解粒子系统的概念，其实在游戏中，我们到处都能“看见”*粒子*，一般情况下，粒子会携带图像，比如坦克受损时会产生一团团的烟雾，这是因为粒子在向上运动，每一个烟雾都是一个粒子，所以你能观察到不断向上冒出的烟雾。我们在游戏里看见病毒狙击手射杀一名步兵时，会产生一团团绿色的毒气，这些毒气到处飘动，也是因为这些*粒子*在运动。  
+  
+我们可以直接用特定语句设置粒子系统，比如你可以直接在弹头中设置粒子系统（Particle=），以及坦克受损产生的粒子系统（在单位本体中设置：DamageParticleSystems=）这里就不展开讲了。除了用特定语句设置的方式，还可以使用更具体的方式进行设置，新手只需粗略了解即可：  
+
 ```ini
 ;在武器本体中，首先加入这个语句：
 AttachedParticleSystem=;在粒子系统注册表中选择粒子系统
 
-;然后使用以下三种任意语句即视为开启，在表现方式上无区别，由粒子系统自身定义
+;然后使用以下三种任意语句即视为开启，在表现方式上由 BehavesLike= 定义，毒气Gas丨烟雾Smoke丨喷火Fire丨火花Spark丨轨道炮Railgun
 IsRailgun=yes;地形高低差可能会导致粒子被截断...可安装 Phobos 修复
-UseFireParticles=yes
-UseSparkParticles=yes
+UseFireParticles=yes;使弹头动画不播放、武器本体中的伤害Damage无效，可改用穿透伤害
+UseSparkParticles=yes;常见维修车使用
 
 ;※推荐使用的 Ares 内容：
 ;Ares 引擎中有提供代替语句，例如可将 IsRailgun= 改用 IsDetachedRailgun=，解决第一发攻击产生的粒子动画未消散前，就无法发射第二发的硬编码问题。
 ```
-※案例：这个是喷火武器，这是遗留在规则文件中的废案，举例：共和国之辉 MOD 将喷火粒子系统重新利用在了喷火碉堡上
+  
+当你看到以上语句，说明该武器启用了粒子系统。  
+  
+※再往下内容就比较多了，所以没有讲解，只展示代码：
+
+以下仅展示喷火武器（BehavesLike=Fire）的粒子系统，遗留在规则文件中的废案，新手过目即可：
 ```ini
 [FireballLauncher];武器本体
 Damage=0
 AmbientDamage=2;穿透伤害，必须先开启粒子系统
 ROF=50
 Range=4.25
-Projectile=Invisible
+Projectile=Invisible;这个抛射体不能用，需要改成例如 InvisibleLow
 Speed=1
 Warhead=Fire
 Report=FLAMTNK1
@@ -222,18 +214,19 @@ AttachedParticleSystem=FireStreamSys;要启用的粒子系统
 Burst=2
 
 [FireStreamSys];粒子系统
-HoldsWhat=FireStream;粒子
+HoldsWhat=FireStream
 Spawns=yes
 SpawnFrames=4
 BehavesLike=Fire;类型：Gas丨Smoke丨Fire丨Spark丨Railgun
-Image=TWLT036
+Image=TWLT036;这里的Image语句是无效的，可以删掉
 Lifetime=30
 
 [FireStream];粒子
-Image=WCCLOUD1;每个粒子显示的图像
+Image=WCCLOUD1;每个粒子显示的图像，这里的喷火粒子需要有方向性，例如步兵有8个方向的朝向，这里也是如此，否则会有显示上的问题（关于图像素材(SHP)等讲解会集中在ART章节）
 Deacc=0.01
 Velocity=28.0
-BehavesLike=Fire;类型，同上，两个类型不一定是相同的
+BehavesLike=Fire;类型：同上，和粒子系统的类型不一定要相同
+;例如当[FireStream]-> BehavesLike=Smoke时，那么粒子将以烟雾Smoke的形式出现（粒子向"空中"升起），Gas则是将粒子释放在原地（病毒狙击手击杀步兵后，在步兵脚底产生毒气，就是原地释放Gas粒子）
 MaxEC=500
 MaxDC=3
 Warhead=Fire;这里还可以挂弹头
@@ -247,9 +240,28 @@ DeleteOnStateLimit=yes
 Normalized=yes
 FinalDamageState=14
 Report=FLAMTNK1
+;（例：共和国之辉 MOD 将喷火粒子系统重新利用在了喷火碉堡上）
 ```
 
 
+熟悉了注册表以及单位的具体类型，下面我们再来了解一下什么是单位的基本*运动方式*：  
+  
+※运动方式（这部分还没弄好...）  
+  Locomotor=运动模式  
+  MovementZone=寻路方式  
+  额外：  
+  SpeedType=速度类型  
+  配合`Locomotor=` `MovementZone=`  
+  常见速度类型：  
+  不常见速度类型：（选择性了解）  
+  
+  部分其他特殊运动模式：（选择性了解）  
+  当配合额外语句`Teleporter=yes`时，单位运动模式会进行切换（例如超时空矿车传送回矿场再开回矿区）。  
+  当配合额外语句`IsLocomotor=yes`时，`Locomotor=`一般要设置为`{92612C46-F71F-11d1-AC9F-006008055BB5}`（例如磁电坦克把单位举高高）  
+（待完善）  
+  
+两栖   
+  
 
 
 
@@ -309,11 +321,11 @@ LandTargeting=1  ;1
 
 ToProtect=yes  ;重点保护对象（对AI有用，当这个单位被攻击时，AI会调用闲置单位过来保护（只保护已方单位，不包括盟友）
 
-Category=AFV
+Category=AFV;给AI判断用单位的分类，可忽略
 
-Strength=800
+Strength=800;单位生命值
 
-Naval=yes
+Naval=yes;指定该单位是否为海军单位，并会被船坞类建筑生产
 
 Armor=light
 
@@ -343,7 +355,7 @@ Crewed=no
 
 IsSelectableCombatant=yes
 
-Weight=4
+Weight=4;重量，影响单位被掀翻的难易度（例如基洛夫坠毁或无畏战舰用导弹攻击地面等，都能产生“气浪”，Damage伤害越高，ROF攻速越快，单位被“气浪”掀翻的概率越大。单位被恐怖机器人寄生，左右掀起的幅度也和重量有关）
 
 RadialFireSegments=10
 
@@ -351,7 +363,7 @@ OpportunityFire=yes
 
 DistributedFire=yes
 
-Explosion=TWLT070,S_BANG48,S_BRNL58,S_CLSN58,S_TUMU60
+Explosion=TWLT070,S_BANG48,S_BRNL58,S_CLSN58,S_TUMU60;单位被摧毁时产生的爆炸效果
 
 VoiceSelect=AegisSelect  ;单位被玩家选中时的语音
 
@@ -359,11 +371,11 @@ VoiceMove=AegisMove  ;玩家命令其移动时的语音
 
 VoiceAttack=AegisAttackCommand  ;玩家命令其攻击时语音
 
-VoiceFeedback=  ;单位害怕时的语音（一般步兵才有害怕语音，例如动员兵低血量时会害怕地叫妈咪...可自行添加）
+VoiceFeedback=  ;单位害怕时的语音（可自行添加，例如动员兵低血量时会害怕地叫妈咪...）
 
 DieSound=  ;单位被摧毁的声音（单位被摧毁时的声音，而步兵一般是指死亡语音，例如各种惨叫声，可自行添加）
 
-SinkingSound=GenLargeWaterDie  ;船被击毁后沉入水底的声音
+SinkingSound=GenLargeWaterDie  ;船被击毁后沉入水底的声音，需要Weight大于3时才会沉船，否则使用Explosion的爆炸效果
 
 MoveSound=AegisMoveStart  ;移动的声音，例如坦克的轮子移动时发出的声音
 
@@ -373,19 +385,19 @@ SpeedType=Float
 
 MovementZone=Water
 
-ThreatPosed=25
+ThreatPosed=25;单位的威胁值，给AI判断是否优先攻击这个单位（没有武器的单位除外）
 
-DamAGeParticleSystems=SparkSys,SmallGreySSys
+DamAGeParticleSystems=SparkSys,SmallGreySSys;单位受损后，出现浓烟等效果的粒子系统，这里是常用的火花粒子系统[SparkSys]和烟雾粒子系统[SmallGreySSys]
 
 VeteranAbilities=STRONGER,FIREPOWER,ROF,SIGHT,FASTER ;单位一星时赋予的额外增益属性，STRONGER 表示单位护甲获得额外加成（可以理解成更 “抗揍” 了，但单位总血量是不变的），还有 FIREPOWER 代表攻击力加成、ROF 代表攻击速度提升、SIGHT 视野变广、FASTER 移动速度变快。具体增益数值在全局代码中统一定义。
 
 EliteAbilities=SELF_HEAL,STRONGER,FIREPOWER,ROF ;单位三星时赋予的额外增益属性，其中 SELF_HEAL 表示单位获得自动治愈能力（自动回血）。
 
-ElitePrimary=MedusaE
+ElitePrimary=MedusaE;单位的三星升级武器
 
-Size=30
+Size=30;
 
-TooBigToFitUnderBridge=true
+TooBigToFitUnderBridge=true;
 
 ```
   
@@ -535,9 +547,9 @@ OmniFire=yes  ;是否可以360°无死角开火，用于无旋转炮塔单位（
 ```
 别忘了还有神盾升级后的武器本体：[MedusaE]  
 
-以及有控制是否能够摧毁树木`Wood=`、围墙`Wall=`和矿石`Tiberium=`的选项，这个有需要可以自行将语句添加到弹头中  
+还有控制是否能够摧毁树木`Wood=`、围墙`Wall=`和矿石`Tiberium=`的选项，这个有需要可以自行将语句添加到弹头中  
   
-如果对弹头和抛射体不满意或者怕和其他单位起冲突（事实上爱国者导弹和神盾巡洋舰共用 [SAMWH] 这个弹头），可以手动添加新的弹头和抛射体，比如新增弹头，需要先复制弹头`[SAMWH]`的所有语句代码到任意位置（注意不同部分之间要留空行），改成好记的名字`[SAMWH2]`，并在弹头注册表中注册 `SAMWH2` ，这样新的弹头就做好啦~ 是不是很简单？像这样的做法当然还可以用在武器本体还有单位本体上，当然都要注册一下，注册是好习惯！（注意抛射体是无需注册的，只需记住：有对应注册表的都要注册，上面的常用注册表已经列出来了）  
+如果对弹头和抛射体不满意或者怕和其他单位起冲突（事实上爱国者导弹和神盾巡洋舰共用 [SAMWH] 这个弹头），可以手动添加新的弹头和抛射体，比如新增弹头，需要先复制弹头`[SAMWH]`的所有语句代码到任意位置（注意不同部分之间要留空行），改成好记的名字`[SAMWH2]`，并在弹头注册表中注册 `SAMWH2` ，这样新的弹头就做好啦~ 是不是很简单？像这样的做法当然还可以用在武器本体还有单位本体上，当然都要注册一下，注册是好习惯！（注意抛射体是无需注册的，只需记住：有对应注册表的都要注册，常用注册表都在前面列出来了，可以参考）  
   
   你可以参考多功能步兵车的弹头参数，多功能的弹头是`Warhead=HE`
   
@@ -776,7 +788,7 @@ exit
   
 Tail4Window：※我们主要用到的功能就是实时监控日志和筛选并高亮错误信息，这样查错比较方便  
   
-我配置好了一些关键词和设置，直接导入即可：[下载配置链接](https://pan.baidu.com/s/1KKX2Ge7lh2xvtcnwQpsHHg?pwd=1111)，打开程序进入设置（[图示](https://www.picgo.net/image/%E8%AE%BE%E7%BD%AE.boTNTM)），导入配置文件（[图示2](https://www.picgo.net/image/%E8%AE%BE%E7%BD%AE2.boTYGK)）。打开 debug.log 再点击开始(Start)监控后会有延迟，开头一小部分可能会没有记录到，所以建议至少在载入页面（读条）之前打开，防止错过关键信息，或者可以重新打开 debug.log，然后再点击开始(Start)监控，这样就能重新读取之前的所有信息。点选“Filter”即可筛选出应该注意的地方。  
+我配置好了一些关键词和设置，直接导入即可：[下载配置链接](https://pan.baidu.com/s/1KKX2Ge7lh2xvtcnwQpsHHg?pwd=1111)，打开程序进入设置（[图示](https://www.picgo.net/image/%E8%AE%BE%E7%BD%AE.boTNTM)），导入配置文件（[图示2](https://www.picgo.net/image/%E8%AE%BE%E7%BD%AE2.boTYGK)）。打开 debug.log 再点击开始(Start)监控后会有延迟，开头一小部分可能会没有记录到，所以建议至少在载入页面（读条）之前进行监控，或者重新打开 debug.log，再点击开始(Start)监控，这样就能重新读取之前的所有信息。点选“Filter”即可筛选出应该注意的地方。  
 
 Tail Ace：※这是备选工具，如果你的系统比较老旧，可以试试它，功能和 Tail4Window 相似，但不能导入配置，所以需要进行手动配置  
   
