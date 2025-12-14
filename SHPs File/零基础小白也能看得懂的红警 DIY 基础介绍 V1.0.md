@@ -191,7 +191,7 @@ UseFireParticles=yes;使弹头动画不播放、武器本体中的伤害Damage�
 UseSparkParticles=yes;常见维修车使用
 
 ;※推荐使用的 Ares 内容：
-;Ares 引擎中有提供代替语句，例如可将 IsRailgun= 改用 IsDetachedRailgun=，解决第一发攻击产生的粒子动画未消散前，就无法发射第二发的硬编码问题。
+;Ares 引擎中有提供代替语句，例如可将 IsRailgun= 改用 IsDetachedRailgun=，解决第一次攻击产生的粒子动画未消散前，无法进行第二次攻击的硬编码问题。
 ```
   
 当你看到以上语句，说明该武器启用了粒子系统。  
@@ -202,7 +202,7 @@ UseSparkParticles=yes;常见维修车使用
 ```ini
 [FireballLauncher];武器本体
 Damage=0
-AmbientDamage=2;穿透伤害必须先开启粒子系统，但火焰粒子系统BehavesLike=Fire穿透伤害无效
+AmbientDamage=2;穿透伤害必须先开启粒子系统，但喷火粒子系统BehavesLike=Fire穿透伤害无效
 ROF=50
 Range=4.25
 Projectile=Invisible;这个抛射体不能用，需要改成例如 InvisibleLow
@@ -214,11 +214,11 @@ AttachedParticleSystem=FireStreamSys;要启用的粒子系统
 Burst=2
 
 [FireStreamSys];粒子系统
-HoldsWhat=FireStream
+HoldsWhat=FireStream;要使用的粒子
 Spawns=yes
 SpawnFrames=4
 BehavesLike=Fire;类型：Gas丨Smoke丨Fire丨Spark丨Railgun
-Image=TWLT036;这里的Image语句是无效的，可以删掉
+Image=TWLT036;喷火粒子系统的Image语句是无效的，可以删掉
 Lifetime=30
 
 [FireStream];粒子
