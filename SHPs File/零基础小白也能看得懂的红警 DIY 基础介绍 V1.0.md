@@ -187,7 +187,7 @@ AttachedParticleSystem=;在粒子系统注册表中选择粒子系统
 
 ;然后使用以下三种任意语句即视为开启，在表现方式上由 BehavesLike= 定义，毒气Gas丨烟雾Smoke丨喷火Fire丨火花Spark丨轨道炮Railgun
 IsRailgun=yes;地形高低差可能会导致粒子被截断...可安装 Phobos 修复
-UseFireParticles=yes;使弹头动画不播放、武器本体中的伤害Damage无效，可改用穿透伤害
+UseFireParticles=yes;使弹头动画不播放、武器本体中的伤害Damage无效，可改用粒子伤害Damage
 UseSparkParticles=yes;常见维修车使用
 
 ;※推荐使用的 Ares 内容：
@@ -202,7 +202,7 @@ UseSparkParticles=yes;常见维修车使用
 ```ini
 [FireballLauncher];武器本体
 Damage=0
-AmbientDamage=2;穿透伤害，必须先开启粒子系统
+AmbientDamage=2;穿透伤害必须先开启粒子系统，但火焰粒子系统BehavesLike=Fire穿透伤害无效
 ROF=50
 Range=4.25
 Projectile=Invisible;这个抛射体不能用，需要改成例如 InvisibleLow
