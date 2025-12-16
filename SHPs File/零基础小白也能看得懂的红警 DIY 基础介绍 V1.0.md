@@ -67,15 +67,15 @@ TooBigToFitUnderBridge=true
 以上即为武器类型的介绍，下面让我们回到`Primary=Medusa`这个语句，我们同样带上括号搜索`Medusa`这个武器，像这样：`[Medusa]`，搜索出来的结果如下：  
 ~~~ini
 [Medusa]    
-Damage=100  
-ROF=15      
-Range=12    
-Speed=120  
-Projectile=MedusaProjectile  
-Warhead=SAMWH  
-Report=AegisAttack  
-TurboBoost=yes  
-OmniFire=yes  
+Damage=100;攻击力  
+ROF=15;攻速      
+Range=12;射程范围    
+Speed=120;抛射体飞行速度（有上限）  
+Projectile=MedusaProjectile;抛射体（重点）  
+Warhead=SAMWH;弹头（重点）  
+Report=AegisAttack;攻击的声音  
+TurboBoost=yes;攻击飞行物是否使抛射体有速度加成  
+OmniFire=yes;使无炮塔单位不用转向就能开火（反例：坦克杀手）  
 ~~~
 现在你看到的部分就是**武器本体**（特指部分代码），简称**武器**（泛指相关代码），这些语句是武器的*基本属性*，例如修改单位的伤害（攻击力）`Damage=`、攻击范围`Range=`等，都是在该部分修改的。
   
@@ -179,7 +179,7 @@ ProneDamage=100%
 ```
 什么是**粒子系统**？烟雾（载具受损的烟雾效果）、火花（维修车修载具时喷溅的火花）、毒气（病毒狙击手击杀步兵后产生的毒气）是原版游戏中最常见的*粒子系统类型*，而我们在游戏中到处都能“看见”**粒子**，你可以把粒子看作一个隐形的“钉子”，粒子通常会携带一个以“钉子”为中心的图像（就像往照片的正中央钉钉子，但是钉子成精了！带着照片在墙上移动！），比如坦克受损时会产生一团团的烟雾，每一团烟雾代表一个粒子，而粒子都在向上运动，所以你能观察到不断向上冒出的烟雾。再比如病毒狙击手射杀一名步兵时，会产生一团团绿色的毒气，这些毒气到处飘动，也是因为这些粒子在运动。总而言之：图像负责显示，而*粒子负责带着图像移动*。  
   
-我们可以直接用特定语句设置粒子系统，比如你可以直接在弹头中设置粒子系统（Particle=），以及坦克受损产生的粒子系统（在单位本体中设置：DamageParticleSystems=）这里就不展开讲了。除了特定语句，还有更具体的设置，新手只需粗略了解即可：  
+我们可以直接用特定语句设置粒子系统，比如你可以直接在弹头中设置粒子系统（Particle=），以及坦克受损产生的粒子系统（在单位本体中设置：DamageParticleSystems=）这里就不展开讲了。除了特定语句，还有更具体的设置，新手过目即可：  
 
 ```ini
 ;在武器本体中，首先加入这个语句：
@@ -187,24 +187,24 @@ AttachedParticleSystem=;在粒子系统注册表中选择粒子系统
 
 ;然后使用以下三种任意语句即视为开启，在表现方式上由 BehavesLike= 定义，毒气Gas丨烟雾Smoke丨喷火Fire丨火花Spark丨轨道炮Railgun
 IsRailgun=yes;地形高低差可能会导致粒子被截断...可使用 Phobos 修复
-UseFireParticles=yes;使弹头动画不播放、武器本体中的伤害Damage无效（允许粒子伤害Damage）、粒子动画Image挂武器的伤害Damage无效，可使用 Ares 修复
+UseFireParticles=yes;使弹头动画不播放、武器本体中的伤害Damage无效（允许粒子伤害Damage）、粒子动画Image挂武器的伤害Damage无效，可使用 Ares 修复（无法修复粒子动画挂武器的伤害）
 UseSparkParticles=yes;常见维修车使用
 
 ;※推荐使用的 Ares 内容：
 ;Ares 引擎中有提供代替语句，例如可将 IsRailgun= 改用 IsDetachedRailgun=，解决第一次攻击产生的粒子动画未消散前，无法进行第二次攻击的硬编码问题。
 ```
   
-以上就是粒子系统具体的启用语句，再往下内容就比较多了，所以没有讲解，只展示代码：
+以上就是粒子系统具体的启用语句，再往下内容就比较多了，所以没有讲解，只展示代码，新手粗略过目一下即可：
 
-以下仅展示喷火武器（BehavesLike=Fire）的粒子系统，遗留在规则文件中的废案，新手过目即可：
+以下仅展示喷火武器（BehavesLike=Fire）的粒子系统，遗留在规则文件中的废案：
 ```ini
-[FireballLauncher];武器本体
-Damage=0;火焰粒子系统会使武器伤害无效
-AmbientDamage=2;穿透伤害必须先开启粒子系统，但喷火粒子系统BehavesLike=Fire穿透伤害无效
-ROF=50;攻速，但
+[FireballLauncher];武器本体（使用喷火粒子系统）
+Damage=0;无效（喷火粒子系统会使武器伤害无效）
+AmbientDamage=2;穿透伤害必须先开启粒子系统，但喷火粒子系统穿透伤害无效
+ROF=50;攻速，但受制于喷火粒子的消散时间
 Range=4.25
 Projectile=Invisible;这个抛射体不能用，需要改成例如 InvisibleLow
-Speed=1
+Speed=1;无效
 Warhead=Fire
 Report=FLAMTNK1
 UseFireParticles=yes;开启
@@ -213,31 +213,32 @@ Burst=2
 
 [FireStreamSys];粒子系统
 HoldsWhat=FireStream;要使用的粒子
-Spawns=yes
-SpawnFrames=4
+Spawns=yes;是否用此系统不停刷出粒子
+SpawnFrames=4;刷粒子的间隔，与Spawns=连用，
 BehavesLike=Fire;类型：Gas丨Smoke丨Fire丨Spark丨Railgun
 Image=TWLT036;喷火粒子系统的Image语句是无效的，可以删掉
-Lifetime=30
+Lifetime=30;粒子的数量
 
 [FireStream];粒子
 Image=WCCLOUD1;每个粒子显示的图像，这里的喷火粒子需要有方向性，例如步兵有8个方向的朝向，这里也是如此，否则会有显示上的问题（关于图像素材(SHP)等讲解会集中在ART章节）
-Deacc=0.01
-Velocity=28.0
+Deacc=0.01;粒子移动速度衰减，如果数值偏高，可能导致粒子没有接触到目标就慢慢停下来了
+Velocity=28.0;运动速度（视觉效果），如果设置太慢，可能导致火焰还没飞到那边，目标就已经被烧死了（
 BehavesLike=Fire;类型：同上，和粒子系统的类型不一定要相同
 ;例如当[FireStream]-> BehavesLike=Smoke时，那么粒子将以烟雾Smoke的形式出现（粒子向"空中"升起），Gas则是将粒子释放在原地
-MaxEC=500
-MaxDC=3
+MaxEC=500;粒子存在的最长时间限制
+MaxDC=3;间隔多少帧产生一次伤害
 Warhead=Fire;这里还可以挂弹头
 Damage=2;粒子伤害，如果不需要可以删掉
-StartStateAI=1;设置喷火粒子动画开始的帧数
+StartStateAI=1;设置喷火粒子动画开始的帧数（从1开始，不要设为0）
 EndStateAI=19;设置喷火粒子动画结束的帧数
-StateAIAdvance=6
-Translucent50State=15
-Translucent25State=10
-DeleteOnStateLimit=yes
+StateAIAdvance=6;控制图像的播放速度，数字越大越慢（喷火粒子系统貌似无效）
+Translucent50State=15;产生一半攻击力的帧（图像透明度50%时）
+Translucent25State=10;产生四分之一攻击力的帧（图像透明度75%时）
+DeleteOnStateLimit=yes;图像播放结束后移除粒子
 Normalized=yes;粒子动画播放速度是否随游戏速度改变
-FinalDamageState=14
+FinalDamageState=14;最后一个有伤害的帧数，如果设置太少，会出现火焰图像明明已经接触到目标却没有造成伤害的情况
 Report=FLAMTNK1
+
 ;（例：共和国之辉 MOD 将喷火粒子系统重新利用在了喷火碉堡上）
 ```
 
