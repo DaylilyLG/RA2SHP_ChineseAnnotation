@@ -70,7 +70,7 @@ TooBigToFitUnderBridge=true
 Damage=100;攻击力  
 ROF=15;攻速      
 Range=12;射程范围    
-Speed=120;抛射体飞行速度（有上限）  
+Speed=120;抛射体飞行速度（可理解为弹体飞行速度）（有速度上限）  
 Projectile=MedusaProjectile;抛射体（重点）  
 Warhead=SAMWH;弹头（重点）  
 Report=AegisAttack;攻击的声音  
@@ -217,7 +217,7 @@ Spawns=yes;是否用此系统不停刷出粒子
 SpawnFrames=4;刷粒子的间隔，与Spawns=连用，
 BehavesLike=Fire;类型：Gas丨Smoke丨Fire丨Spark丨Railgun
 Image=TWLT036;喷火粒子系统的Image语句是无效的，可以删掉
-Lifetime=30;粒子的数量
+Lifetime=30;影响粒子的数量
 
 [FireStream];粒子
 Image=WCCLOUD1;每个粒子显示的图像，这里的喷火粒子需要有方向性，例如步兵有8个方向的朝向，这里也是如此，否则会有显示上的问题（关于图像素材(SHP)等讲解会集中在ART章节）
@@ -229,14 +229,14 @@ MaxEC=500;粒子存在的最长时间限制
 MaxDC=3;间隔多少帧产生一次伤害
 Warhead=Fire;这里还可以挂弹头
 Damage=2;粒子伤害，如果不需要可以删掉
-StartStateAI=1;设置喷火粒子动画开始的帧数（从1开始，不要设为0）
-EndStateAI=19;设置喷火粒子动画结束的帧数
+StartStateAI=1;设置喷火粒子动画开始的帧数（从0开始为第1帧，1为第2帧）
+EndStateAI=19;设置每个方向的喷火粒子动画结束的帧数（从1开始，如果每个方向都有20个图像就填20）
 StateAIAdvance=6;控制图像的播放速度，数字越大越慢（喷火粒子系统貌似无效）
 Translucent50State=15;产生一半攻击力的帧（图像透明度50%时）
 Translucent25State=10;产生四分之一攻击力的帧（图像透明度75%时）
 DeleteOnStateLimit=yes;图像播放结束后移除粒子
 Normalized=yes;粒子动画播放速度是否随游戏速度改变
-FinalDamageState=14;最后一个有伤害的帧数，如果设置太少，会出现火焰图像明明已经接触到目标却没有造成伤害的情况
+FinalDamageState=14;最后一个有伤害的帧数，如果设置太少，会出现火焰图像明明已经接触到目标却没有造成伤害的情况（从1开始）
 Report=FLAMTNK1
 
 ;（例：共和国之辉 MOD 将喷火粒子系统重新利用在了喷火碉堡上）
@@ -401,6 +401,7 @@ TooBigToFitUnderBridge=true;
 ```
   
   ※至此，单位本体的基本结构展示结束，是不是觉得很多语句，比较难记？事实上一般人不大可能把所有代码都改一遍，像我们新人这种 “小修小改” 的程度，就更不用担心啦！之后还会有实操部分，熟悉了自然就会理解各类语句的含义~  
+  
   下面开始是第二部分：武器本体  
   
 ~~~ini  
@@ -434,9 +435,9 @@ OmniFire=yes
 Burst=2 ;例如三星灰熊坦克开一次火会连发两个炮弹  
 （没有这个语句将默认 Burst=1）
 ~~~
-  ※以上是武器本体的基本结构，下面是第三部分：抛射体和弹头
+以上是武器本体的基本结构，下面是第三部分：抛射体和弹头
   
-~~~ini  
+~~~
 
 [MedusaProjectile] ;抛射体
 
@@ -532,7 +533,7 @@ ROF=15  ;攻速
 
 Range=12  ;范围  
 
-Speed=120  ;弹体飞行速度  
+Speed=120  ;抛射体飞行速度（可理解为弹体飞行速度，且有速度上限）  
 
 Projectile=MedusaProjectile  ;抛射体  
 
