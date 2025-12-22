@@ -1,7 +1,7 @@
 # 对照表
   
-> [!IMPORTANT]
->使用了 Markdown 标记语言优化阅读体验，推荐在线阅览，或使用 HBuilder、VScode 等软件打开。
+> [!IMPORTANT][重要提醒]
+>对照表使用了 Markdown 标记语言优化阅读体验，推荐在线阅览，或使用 HBuilder、VScode 等软件打开。
   
 ## 前言：
 - 这是给初次接触红警DIY的朋友们制作的，将所有shp文件名用中文标注，方便用中文查找shp素材，新手用中文查找更方便，对照中文并搜索shp文件名就能在相关位置找到想要的素材。该对照表是单独附带在shp提取文件的压缩包内的，若你熟练使用 XCC Mixer 工具进行提取，则只需解压此对照表即可。压缩包解压后的文件体积较大，你需要解压到磁盘空间充足的位置。（个人推荐使用 Ra2YuriAna 作为从零开始的DIY工具，附带简单的语句标签翻译，在这之上就推荐INI辅助工具 INIWeaver，对于制作复杂单位非常有帮助，但不支持实时修改 INI 内容） 
@@ -883,8 +883,7 @@ start Syringe "gamemd.exe" %*  -NOLOGO -LOG
 exit
 ```
 
-> [!NOTE]
-> 备注：
+> [!NOTE][备注]
 > - `-NOLOGO`
 >   - 启动游戏时跳过 EA 商标的 LOGO 动画的播放（`ea_wwlogo.bik`）
 > - `-LOG`
