@@ -1,6 +1,6 @@
 # 对照表
   
-> [!IMPORTANT][重要提醒]
+> [!IMPORTANT]
 >对照表使用了 Markdown 标记语言优化阅读体验，推荐在线阅览，或使用 HBuilder、VScode 等软件打开。
   
 ## 前言：
@@ -883,7 +883,8 @@ start Syringe "gamemd.exe" %*  -NOLOGO -LOG
 exit
 ```
 
-> [!NOTE][备注]
+> [!NOTE]
+> 备注：
 > - `-NOLOGO`
 >   - 启动游戏时跳过 EA 商标的 LOGO 动画的播放（`ea_wwlogo.bik`）
 > - `-LOG`
@@ -921,10 +922,13 @@ SW.AlwaysGranted=yes     ;无需建筑，直接使用（例如闪电风暴需要
 测试1  
 测试2
 ~~~
+
+网页启用新格式：
 :::important
 测试
 :::
 
+网页不要用下面格式
 > [!IMPORTANT]
 > 测试
 > - 测试
