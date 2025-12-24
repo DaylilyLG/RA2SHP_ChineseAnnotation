@@ -217,11 +217,11 @@ Spawns=yes;是否用此系统不停刷出粒子
 SpawnFrames=4;刷粒子的间隔，与Spawns=连用，
 BehavesLike=Fire;类型：Gas丨Smoke丨Fire丨Spark丨Railgun
 Image=TWLT036;喷火粒子系统的Image语句是无效的，可以删掉
-Lifetime=30;影响粒子的数量
+Lifetime=30;影响一次性产生的粒子数量（例如数值越高，会使喷火武器单次攻击的持续时间越长，期间将持续释放粒子）
 
 [FireStream];粒子
 Image=WCCLOUD1;每个粒子显示的图像，这里的喷火粒子需要有方向性，例如步兵有8个方向的朝向，这里也是如此，否则会有显示上的问题（关于图像素材(SHP)等讲解会集中在ART章节）
-Deacc=0.01;粒子移动速度衰减，如果数值偏高，可能导致粒子没有接触到目标就慢慢停下来了
+Deacc=0.01;粒子移动速度衰减，如果数值偏高，可能导致粒子没有到达目的地就慢慢停下来了
 Velocity=28.0;运动速度（视觉效果），如果设置太慢，可能导致火焰还没飞到那边，目标就已经被烧死了（
 BehavesLike=Fire;类型：同上，和粒子系统的类型不一定要相同
 ;例如当[FireStream]-> BehavesLike=Smoke时，那么粒子将以烟雾Smoke的形式出现（粒子向"空中"升起），Gas则是将粒子释放在原地
