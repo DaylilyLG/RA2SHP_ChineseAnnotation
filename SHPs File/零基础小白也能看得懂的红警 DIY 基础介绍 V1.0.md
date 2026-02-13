@@ -649,15 +649,18 @@ E.武器可以给不同的单位交替使用
 ※特别提醒，需要改动地图时，最好手动备份一下地图文件。不应出现修改地图文件代码的同时，又打开地编对其进行修改的情况。  
 ※RA2 原版DIY玩家则需使用旧版的地编，里面的许多内容是相似的，所以不用担心。这里推荐使用 FA2SP，这应该是最后一个支持 RA2 原版的地编，下载：[FA2SP 1.6.2 安装包](https://pan.baidu.com/s/1u_zecwvom5cL9mt91qSDSw?pwd=RA2M) 。	  
 	
-  ※这里准备介绍韩大猫（Handama）的 [HDM Edition](https://github.com/handama/FA2sp/releases)  
-（以下简称HDM）  
-（以HDM地编1.3.5版本为例，该版本支持保存地图文件中的注释，要注意该功能并非默认开启，需要在“选择”->“偏好设置”中打开注释保存功能）
+  ※（包含TX地形推荐）
+  ※这里准备介绍韩大猫（Handama）的 [HDM Edition](https://github.com/handama/FA2sp/releases)  （以下简称HDM）  
   
-  ※这里准备介绍Rampastring的 [WorldAlteringEditor](https://github.com/CnCNet/WorldAlteringEditor/releases)  
-（以下简称WAE）  
-※（这里准备推荐一下TX地形~）  
-（WAE不支持保存注释，默认自动清除注释，如果有残留中文注释可能会乱码，最好使用最新版本保存地图）
+※准备放在正文的注意事项：
+  以HDM地编1.3.5版本为例，该版本支持保存地图文件中的注释，要注意该功能并非默认开启，需要在“选择”->“偏好设置”中打开注释保存功能（注：这将使地编的版本、编码警告注释等信息保存功能无效化）
+  当地图保存后，地图文件内的代码默认会重新顺序，例如加入地图文件中的武器、单位本体等等部分，可在“选择”->“偏好设置”中，打开“维持已有的ini小节顺序”功能（打开该功能后，建议只在结尾的空白处新增代码），默认添加地编信息注释
   
+  ※这里准备介绍Rampastring的 [WorldAlteringEditor](https://github.com/CnCNet/WorldAlteringEditor/releases)  （以下简称WAE）  
+  
+※准备放在正文的注意事项：
+  以WAE地编1.7.8版本为例，WAE不支持保存注释，默认自动清除注释
+  当地图保存后，地图文件内的代码默认会重新顺序，例如手动加入地图文件中的武器、单位本体等等部分，默认添加地编信息注释
   
 ## 其他零碎知识
   
