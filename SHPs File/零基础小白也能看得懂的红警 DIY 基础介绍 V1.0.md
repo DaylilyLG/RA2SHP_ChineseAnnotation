@@ -651,12 +651,12 @@ E.武器可以给不同的单位交替使用
 	
   ※这里准备介绍韩大猫（Handama）的 [HDM Edition](https://github.com/handama/FA2sp/releases)  
 （以下简称HDM）  
-（1.3.5版本的HDM地编已支持保存地图文件中的注释，注意该功能并非默认开启，需要在“选择”->“偏好设置”中打开注释保存功能！）
+（以HDM地编1.3.5版本为例，该版本支持保存地图文件中的注释，要注意该功能并非默认开启，需要在“选择”->“偏好设置”中打开注释保存功能）
   
   ※这里准备介绍Rampastring的 [WorldAlteringEditor](https://github.com/CnCNet/WorldAlteringEditor/releases)  
 （以下简称WAE）  
 ※（这里准备推荐一下TX地形~）  
-（WAE默认保存注释，无需设置，但遇到中文注释可能会乱码，最好使用最新版本保存地图）
+（WAE默认不保存注释，无需设置，遇到中文注释可能会乱码，最好使用最新版本保存地图）
   
   
 ## 其他零碎知识
