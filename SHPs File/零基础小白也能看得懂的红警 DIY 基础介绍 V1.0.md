@@ -656,7 +656,7 @@ E.武器可以给不同的单位交替使用
   ※这里准备介绍Rampastring的 [WorldAlteringEditor](https://github.com/CnCNet/WorldAlteringEditor/releases)  
 （以下简称WAE）  
 ※（这里准备推荐一下TX地形~）  
-（WAE默认不保存注释，无需设置，遇到中文注释可能会乱码，最好使用最新版本保存地图）
+（WAE不支持保存注释，默认自动清除注释，如果有残留中文注释可能会乱码，最好使用最新版本保存地图）
   
   
 ## 其他零碎知识
